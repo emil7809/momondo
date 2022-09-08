@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R] # <- for test, for prod use [L,R=301]
+#RewriteRule ^([^\.]+)$ $1.php [NC,L] 
+
+RewriteRule ^$                  view_index.php [NC,L] 
+RewriteRule ^flight_search$     view_flight_search.php [NC,L] 
+RewriteRule ^trips$             view_trips.php [NC,L] 
+RewriteRule ^signin$            view_signin.php [NC,L] 
+RewriteRule ^signup$            view_signup.php [NC,L] 
+
+RewriteRule ^app.css$           css_app.css [NC,L]          
+         
+ErrorDocument 404 /view_404.php
