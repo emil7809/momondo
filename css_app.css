@@ -12,15 +12,25 @@ body{
   background: rgba(33, 3, 58, 1);
   overflow-y: hidden;
 }
-main > * {
-  display: flex;
-  justify-content: center;
- /* width: 100vw; */
+
+.center_container {
+ display: grid;
+ grid-template-columns: 1fr 900px 1fr;
+
 }
-main > * > * {
-  display: flex;
-  justify-content: center;
- /*  width: 800px; */
+
+.center_container > * {
+  grid-column-start: 2;
+}
+
+.center_container_wide {
+ display: grid;
+ grid-template-columns: 1fr 1200px 1fr;
+
+}
+
+.center_container_wide > * {
+  grid-column-start: 2;
 }
 
 .input-caontainer{
@@ -55,7 +65,6 @@ h1 {
 a, p {
   font-family: "cerapro-bold",sans-serif;
 }
-
 
 nav{
   display: flex;
@@ -130,17 +139,37 @@ nav #logo {
 }
 
 div#flights-search{
-  width: 100vw;
+  /* width: 100vw; */
   height: 20rem;
-  padding: 2rem 1rem;
+ /*  padding: 2rem 1rem; */
   background-color: #150127;
 }
 
-div#flights-search form {
+
+div#trip_details {
+  display: flex;
+  padding: .5rem 0;
+  padding-top: 2rem;
+}
+
+div#trip_details > * {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+div#trip_details p{
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: .08em;
+}
+
+#flight_form {
   display: flex;
 }
 
-div#flights-search div#from-container div#from-results{
+#flight_form div#from-container div#from-results{
   display: none;
   width: 480px;
   background: white;
@@ -195,7 +224,7 @@ div.city-contaier:hover {
   background: rgba(33, 3, 58, 0.1);
 }
 
-div#flights-search div#switch {
+#flight_form div#switch {
   height: 3rem;
   width: 3rem;
   background-color: #f3f0f5;
@@ -205,7 +234,7 @@ div#flights-search div#switch {
   cursor: pointer;
 }
 
-div#flights-search div#to-container div#to-results{
+#flight_form div#to-container div#to-results{
   display: none;
   width: 480px;
   background: white;
@@ -214,6 +243,41 @@ div#flights-search div#to-container div#to-results{
   position: absolute;
   padding: 1rem;
   z-index: 999999;
+}
+
+#flight_form div#time_container {
+  margin-left: .5rem;
+}
+
+#flight_form button {
+    padding: 0 .8rem;
+    border-radius: 8px;
+    font-family: CeraPro-Regular,'Cera Pro',sans-serif;
+    font-weight: 600;
+    line-height: 24px;
+    font-size: 1rem;
+    color: #150127;
+    background-color: #f3f0f5;
+    border: 1px solid #f3f0f5;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+.the_big_black {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(33, 3, 58, .5);
+  margin-top: -3.6rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
+}
+.the_big_black .module_container {
+  grid-column-start: 2;
+  background: white;
+  height: 650px;
+  margin-top: 7.8rem;
+  border-radius: 18px;
 }
 
 /* div#container{
@@ -263,4 +327,12 @@ color: #f57318;;
 .light {
   fill: white;
   color: white;
+}
+
+.line {
+  height: 2rem;
+  width: 1px;
+  background: black;
+  margin: 0 1rem;
+  align-self: center;
 }
