@@ -14,8 +14,13 @@
 
   <header>  
     <nav>
-        <div>
+        <div id="logo_container">
           <a href="/"><img id="logo" src="img/momondo.png" alt="momondo.png"></a>
+          <?php
+         if ($_title == 'Momondo') {
+           require_once __DIR__.'/svgs.php'; echo $_mini_logo;
+         }
+          ?>
         </div>
 
         <div class="flex">
@@ -52,3 +57,5 @@
         </div>
     </nav>
   </header>
+
+  <main>

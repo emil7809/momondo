@@ -5,6 +5,24 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.1rem;
 }
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(33, 3, 58, 1);
+  overflow-y: hidden;
+}
+main > * {
+  display: flex;
+  justify-content: center;
+ /* width: 100vw; */
+}
+main > * > * {
+  display: flex;
+  justify-content: center;
+ /*  width: 800px; */
+}
+
 .input-caontainer{
   height: 3rem;
   padding: 0 1rem;
@@ -29,20 +47,16 @@ input {
 h1 {
   font-family: CeraPro-Bold,'Cera Pro',sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: white;
+  padding-top: 2.8rem;
 }
 
 a, p {
   font-family: "cerapro-bold",sans-serif;
 }
 
-body{
-  width: 100vw;
-  height: 100vh;
-  background: rgba(33, 3, 58, 1);
-  overflow-y: hidden;
-}
+
 nav{
   display: flex;
   justify-content: space-between;
@@ -51,6 +65,11 @@ nav{
   width: 100vw;
   height: 3.6rem; 
   background: rgba(33, 3, 58, 1);
+}
+
+nav #logo_container {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -197,20 +216,20 @@ div#flights-search div#to-container div#to-results{
   z-index: 999999;
 }
 
-div#main{
+/* div#container{
   display: flex;
   width: 100vw;
 }
-div#main div#left{
+div#container div#left{
   width: 30%;
   height: 10rem;
   background: rgba(33, 3, 58, 0.7);
 }
-div#main div#right{
+div#container div#right{
   width: 70%;
   height: 10rem;
   background: rgba(33, 3, 58, 0.3);
-}
+} */
 footer{
   width: 100vw;
   background: rgba(19, 0, 38, 1);
