@@ -8,5 +8,5 @@ require_once __DIR__ . '/comp_header.php'; ?>
   <?php require_once __DIR__ . '/comp_flight_form.php'; ?>
 </div>
 
-
+<script src="app.js"></script>
 <?php require_once __DIR__ . '/comp_footer.php' ?>

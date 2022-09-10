@@ -107,11 +107,21 @@ input {
   margin-top: 0;
 }
 
-.button_type_2 a {
+.button_type_2 {
   color: black;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 100;
+}
+
+.error_style {
+  font-size: 0.7rem;
+  color: red;
+}
+
+.validate_error {
+  box-shadow: 0px 5px 10px rgba(204, 64, 64, 0.75) !important;
+  border-bottom: 2px solid #a42424 !important;
 }
 
 h1 {
@@ -126,6 +136,7 @@ a,
 p,
 h2 {
   font-family: "cerapro-bold", sans-serif;
+  text-decoration: none;
 }
 
 nav {
@@ -359,6 +370,15 @@ div.city-contaier:hover {
   text-decoration: none;
 }
 
+.the_big_black .module_container .module_top .back {
+  margin-left: 2rem;
+}
+
+.the_big_black .module_container .module_top .back a {
+  font-size: 0.8rem;
+  color: rgb(64, 164, 204);
+}
+
 .the_big_black .module_container .module_mid {
   display: flex;
   justify-content: center;
@@ -393,6 +413,10 @@ div.city-contaier:hover {
 
 .module_bot {
   padding: 0 2rem;
+}
+
+.sign_up_button {
+  margin-top: 3rem;
 }
 
 /* div#container{

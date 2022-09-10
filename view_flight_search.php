@@ -15,4 +15,5 @@ require_once __DIR__ . '/comp_header.php'; ?>
     right
   </div>
 </div>
+<script src="app.js"></script>
 <?php require_once __DIR__ . '/comp_footer.php' ?>

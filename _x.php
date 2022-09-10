@@ -1,50 +1,22 @@
-
 <?php
 define('_ITEM_NAME_MIN_LEN', 2);
 define('_ITEM_NAME_MAX_LEN', 10);
-define('_ITEM_PRICE_REGEX', '/^[1-9][0-9]*\.[0-9]{2}$/');
+
+define('_ITEM_TITLE_MIN', 2);
+define('_ITEM_TITLE_MAX', 20);
+define('_ITEM_PRICE_REGEX', '/^[1-9][0-9*]\.[0-9]{2}$/');
+
 
 define('_USER_NAME_MIN_LEN', 2);
-define('_USER_NAME_MAX_LEN', 20);
+define('_USER_NAME_MAX_LEN', 10);
+
 define('_USER_LAST_NAME_MIN_LEN', 2);
 define('_USER_LAST_NAME_MAX_LEN', 20);
 
+/* define('error_message', $error_message); */
+
+
 define('_REGEX_EMAIL', '/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/');
-
-
-// ##############################
-function _validate_item_price()
-{
-    $error_message = 'item_price must be a whole number or have two decimals';
-    if (!isset($_POST['item_price'])) {
-        _respond($error_message, 400);
-    }
-    $_POST['item_price'] = trim($_POST['item_price']);
-    if (ctype_digit($_POST['item_price'])) {
-        $_POST['item_price'] = $_POST['item_price'] . '.00';
-    }
-    $_POST['item_price'] = str_replace(',', '.', $_POST['item_price']);
-    if (!preg_match(_ITEM_PRICE_REGEX, $_POST['item_price'])) {
-        _respond($error_message, 400);
-    }
-    return $_POST['item_price'];
-}
-
-
-// ##############################
-function _validate_email()
-{
-    $error_message = 'email missing or invalid';
-    if (!isset($_POST['email'])) {
-        _respond($error_message, 400);
-    }
-    $_POST['email'] = trim($_POST['email']);
-    if (!preg_match(_REGEX_EMAIL, $_POST['email'])) {
-        _respond($error_message, 400);
-    }
-    return $_POST['email'];
-}
-
 
 // ##############################
 function _validate_item_name()
@@ -61,6 +33,26 @@ function _validate_item_name()
         _respond($error_message, 400);
     }
     return $_POST['item_name'];
+}
+
+// ##############################
+
+function _validate_item_price()
+{
+    $error_message = 'item_price must be a whole number or have two decimals fx: 10.00';
+    if (!isset($_POST['item_price'])) {
+        _respond($error_message, 400);
+    }
+    $_POST['item_price'] = trim($_POST['item_price']);
+    if (ctype_digit($_POST['item_price'])) {
+        $_POST['item_price'] = $_POST['item_price'] . '.00';
+    }
+    $_POST['item_price'] = str_replace(',', '.', $_POST['item_price']);
+    if (!preg_match(_ITEM_PRICE_REGEX, $_POST['item_price'])) {
+        _respond($error_message, 400);
+    }
+
+    return $_POST['item_price'];
 }
 
 // ##############################
@@ -98,11 +90,26 @@ function _validate_user_last_name()
 }
 
 // ##############################
+
+function _validate_email()
+{
+    $error_message = 'email missing or invalid';
+    if (!isset($_POST['email'])) {
+        _respond($error_message, 400);
+    }
+    $_POST['email'] = trim($_POST['email']);
+    if (!preg_match(_REGEX_EMAIL, $_POST['email'])) {
+        _respond($error_message, 400);
+    }
+    return $_POST['email'];
+}
+
+// ##############################
 function _respond($message = '',  $http_response_code = 200)
 {
     header('Content-Type: application/json');
     http_response_code($http_response_code);
-    $response = is_array($message) ? $message : ['info' => $message];
+    $response = is_array($message) ? $message :  ['info' => $message];
     echo json_encode($response);
     exit();
 }

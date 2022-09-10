@@ -15,40 +15,56 @@ require_once __DIR__ . '/comp_header.php'; ?>
             <h2>Sign in or create an account</h2>
             <p>Track prices, organize travel plans and access member-only deals with your momondo account.</p>
         </div>
-        <form method="POST">
-            <div class="input-caontainer2"><input name="email" type="text" placeholder="Email address"></div>
-            <p class="error" style="display: none">Error</p>
+        <form method="POST" onsubmit="validate(validater); return false">
+            <!--  <p class="error" style="display: none">#error#</p> -->
+            <div class="error" style="display: none">
+                <?= $_error_x ?>
+                <p class="error_style">Wrong Email or Pasword</p>
+            </div>
+            <div class="input-caontainer2"><input name="user_email" type="text" placeholder="Email address" onfocus="clean_input()"></div>
 
-            <div class="input-caontainer2"><input name="user_password" type="password" placeholder="Password" onfocus="clean_input()"></div>
-            <button type="button" class="button_type_1" onclick="validate()">Sign in</button>
+            <div class="input-caontainer2">
+                <input name="user_password" type="password" placeholder="Password" onfocus="clean_input()">
+            </div>
+            <button class="button_type_1">Sign in</button>
         </form>
         <div class="or_container module_txt flex">
             <div class="or_line"></div>
             <p>Or</p>
             <div class="or_line"></div>
         </div>
-        <div class="module_bot"><button class="button_type_2"><a href="signup">Sign Up</a></button></div>
+        <div class="module_bot">
+            <a href="signup"><button class="button_type_2">Sign Up</button> </a>
+        </div>
         <div class="module_txt">
             <p>By signing up you accept our terms of use and privacy policy.</p>
         </div>
     </div>
 </div>
 
+<script src="app.js"></script>
 <script>
     function clean_input() {
-        event.target.value = ""
         document.querySelector(".error").style.display = "none"
+        document.querySelector(".input-caontainer2").classList.remove("validate_error")
     }
 
-    async function validate() {
+    async function validater() {
         const form = document.querySelector("form")
-        const conn = await fetch('api-validate.php', {
+        const conn = await fetch('api-user-validator.php', {
             method: "POST",
             body: new FormData(form)
         })
         if (!conn.ok) {
-            document.querySelector(".error").style.display = "block"
+            document.querySelector(".error").style.display = "flex"
+            /*  document.querySelector(".input-caontainer2").classList.add("validate_error") 
+            const data = conn.json()
+            console.log(data.error)*/
+            console.log("Error")
+            return
         }
+
+        console.log("Success")
     }
 </script>
 
