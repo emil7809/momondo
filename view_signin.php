@@ -15,13 +15,13 @@ require_once __DIR__ . '/comp_header.php'; ?>
             <h2>Sign in or create an account</h2>
             <p>Track prices, organize travel plans and access member-only deals with your momondo account.</p>
         </div>
-        <form method="POST" onsubmit="validate(validater); return false">
+        <form id="signin_form" method="POST" onsubmit="validate(validater); return false" action="bridge-signin.php">
             <!--  <p class="error" style="display: none">#error#</p> -->
             <div class="error" style="display: none">
                 <?= $_error_x ?>
                 <p class="error_style">Wrong Email or Pasword</p>
             </div>
-            <div class="input-caontainer2"><input name="user_email" type="text" placeholder="Email address" onfocus="clean_input()"></div>
+            <div class="input-caontainer2"><input name="email" type="text" placeholder="Email address" onfocus="clean_input()"></div>
 
             <div class="input-caontainer2">
                 <input name="user_password" type="password" placeholder="Password" onfocus="clean_input()">
@@ -51,7 +51,7 @@ require_once __DIR__ . '/comp_header.php'; ?>
 
     async function validater() {
         const form = document.querySelector("form")
-        const conn = await fetch('api-user-validator.php', {
+        const conn = await fetch('api-validate-user.php', {
             method: "POST",
             body: new FormData(form)
         })
@@ -64,7 +64,8 @@ require_once __DIR__ . '/comp_header.php'; ?>
             return
         }
 
-        console.log("Success")
+        console.log("Succsess")
+        window.location.replace('bridge_signin.php');
     }
 </script>
 

@@ -69,9 +69,22 @@ require_once __DIR__ . '/comp_header.php'; ?>
             return
         }
 
-        console.log("Sucsess")
-        return
+        const data = await conn.json() // Convert text to JSON
+        // Success
+        console.log("Success")
+        Swal.fire({
+            icon: 'success',
+            title: 'Welcome ' + data.user_name + '!',
+            html: 'You account has been created!',
+            confirmButtonText: 'Sign in'
+        }).then(() => {
+            window.location.replace('signin');
+        })
+
+        /* window.location.replace('/'); */
+
     }
 </script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <?php require_once __DIR__ . '/comp_footer.php' ?>
