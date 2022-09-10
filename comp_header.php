@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="app.css">
 </head>
 
-<body oncontextmenu="return false;" onclick="hide_from_results()">
+<body oncontextmenu="return false;">
 
   <header>
     <nav>

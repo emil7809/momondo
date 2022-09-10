@@ -1,12 +1,12 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.1rem;
 }
 
-body{
+body {
   width: 100vw;
   height: 100vh;
   background: rgba(33, 3, 58, 1);
@@ -14,9 +14,8 @@ body{
 }
 
 .center_container {
- display: grid;
- grid-template-columns: 1fr 900px 1fr;
-
+  display: grid;
+  grid-template-columns: 1fr 900px 1fr;
 }
 
 .center_container > * {
@@ -24,20 +23,19 @@ body{
 }
 
 .center_container_wide {
- display: grid;
- grid-template-columns: 1fr 1200px 1fr;
-
+  display: grid;
+  grid-template-columns: 1fr 1200px 1fr;
 }
 
 .center_container_wide > * {
   grid-column-start: 2;
 }
 
-.input-caontainer{
+.input-caontainer {
   height: 3rem;
   padding: 0 1rem;
   border-radius: 8px;
-  font-family: CeraPro-Regular,'Cera Pro',sans-serif;
+  font-family: CeraPro-Regular, "Cera Pro", sans-serif;
   font-weight: 400;
   line-height: 24px;
   font-size: 1rem;
@@ -54,25 +52,89 @@ input {
   padding-left: 0.8rem;
 }
 
+.input-caontainer2 input {
+  height: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+  border-radius: 3px;
+  font-family: CeraPro-Regular, "Cera Pro", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 1rem;
+  color: #150127;
+  background: none;
+  border: 1px solid #f3f0f5;
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.input-caontainer2 input:focus {
+  box-shadow: 0px 5px 10px rgba(64, 164, 204, 0.75);
+  border-bottom: 2px solid #2444a4;
+}
+
+.button_type_1,
+.button_type_2 {
+  all: unset;
+  background: linear-gradient(
+    80deg,
+    rgba(222, 22, 102, 1) 0%,
+    rgba(127, 36, 106, 1) 100%
+  );
+  width: 100%;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  font-family: "Cera Pro", sans-serif;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.button_type_1:hover {
+  filter: brightness(90%);
+}
+
+.button_type_2:hover {
+  background: #ddd6e3;
+}
+
+.button_type_2 {
+  background: none;
+  border: 1px solid black;
+  margin-top: 0;
+}
+
+.button_type_2 a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+
 h1 {
-  font-family: CeraPro-Bold,'Cera Pro',sans-serif;
+  font-family: CeraPro-Bold, "Cera Pro", sans-serif;
   font-weight: 700;
   font-size: 1.8rem;
   color: white;
   padding-top: 2.8rem;
 }
 
-a, p {
-  font-family: "cerapro-bold",sans-serif;
+a,
+p,
+h2 {
+  font-family: "cerapro-bold", sans-serif;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
   width: 100vw;
-  height: 3.6rem; 
+  height: 3.6rem;
   background: rgba(33, 3, 58, 1);
 }
 
@@ -89,13 +151,13 @@ nav a {
   padding: 15px 15px;
 }
 
-nav #denmark-icon{
+nav #denmark-icon {
   padding-left: 15px;
 }
 
-nav #man-icon{
- width: 20px;
- filter: invert(1);
+nav #man-icon {
+  width: 20px;
+  filter: invert(1);
 }
 
 nav svg {
@@ -105,29 +167,29 @@ nav svg {
   padding: 0;
 }
 
-nav #login-button{
+nav #login-button {
   border: 1px solid white;
   border-radius: 4px;
   cursor: pointer;
   padding-left: 11px;
 }
 
-nav #login-button:hover{
+nav #login-button:hover {
   background: rgba(255, 255, 255, 0.8);
   border-color: rgba(33, 3, 58, 1);
   fill: black;
-color: black;
+  color: black;
 }
 
-nav #login-button:hover svg, #login-button:hover a{
-fill: rgba(33, 3, 58, 1);
-color: rgba(33, 3, 58, 1);
+nav #login-button:hover svg,
+#login-button:hover a {
+  fill: rgba(33, 3, 58, 1);
+  color: rgba(33, 3, 58, 1);
 }
 
-nav #login-button a{
-    padding-left: 11px;
-  }
-  
+nav #login-button a {
+  padding-left: 11px;
+}
 
 nav #dansk {
   padding-left: 5px;
@@ -138,17 +200,16 @@ nav #logo {
   cursor: pointer;
 }
 
-div#flights-search{
+div#flights-search {
   /* width: 100vw; */
   height: 20rem;
- /*  padding: 2rem 1rem; */
+  /*  padding: 2rem 1rem; */
   background-color: #150127;
 }
 
-
 div#trip_details {
   display: flex;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   padding-top: 2rem;
 }
 
@@ -158,18 +219,18 @@ div#trip_details > * {
   margin-right: 1rem;
 }
 
-div#trip_details p{
+div#trip_details p {
   color: white;
   font-size: 0.9rem;
   font-weight: 400;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
 }
 
 #flight_form {
   display: flex;
 }
 
-#flight_form div#from-container div#from-results{
+#flight_form div#from-container div#from-results {
   display: none;
   width: 480px;
   background: white;
@@ -180,14 +241,14 @@ div#trip_details p{
   z-index: 999999;
 }
 
-div.city-contaier{
+div.city-contaier {
   display: flex;
   align-items: center;
   padding: 0.5rem;
   border-radius: 8px;
 }
 
-div.city-contaier img{
+div.city-contaier img {
   height: 3rem;
   width: 3rem;
   border-radius: 8px;
@@ -204,7 +265,8 @@ div.city-contaier p:nth-child(3) {
   padding-left: 5px;
 }
 
-div.city-contaier p:nth-child(3), .city-contaier p:nth-child(2) {
+div.city-contaier p:nth-child(3),
+.city-contaier p:nth-child(2) {
   color: #9684a4;
   font-weight: 400;
   font-size: 0.8rem;
@@ -234,7 +296,7 @@ div.city-contaier:hover {
   cursor: pointer;
 }
 
-#flight_form div#to-container div#to-results{
+#flight_form div#to-container div#to-results {
   display: none;
   width: 480px;
   background: white;
@@ -246,27 +308,27 @@ div.city-contaier:hover {
 }
 
 #flight_form div#time_container {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 #flight_form button {
-    padding: 0 .8rem;
-    border-radius: 8px;
-    font-family: CeraPro-Regular,'Cera Pro',sans-serif;
-    font-weight: 600;
-    line-height: 24px;
-    font-size: 1rem;
-    color: #150127;
-    background-color: #f3f0f5;
-    border: 1px solid #f3f0f5;
-    display: flex;
-    align-items: center;
-    margin-left: 1rem;
+  padding: 0 0.8rem;
+  border-radius: 8px;
+  font-family: CeraPro-Regular, "Cera Pro", sans-serif;
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 1rem;
+  color: #150127;
+  background-color: #f3f0f5;
+  border: 1px solid #f3f0f5;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
 }
 .the_big_black {
   width: 100vw;
   height: 100vh;
-  background: rgba(33, 3, 58, .5);
+  background: rgba(33, 3, 58, 0.5);
   margin-top: -3.6rem;
   position: relative;
   display: grid;
@@ -275,8 +337,8 @@ div.city-contaier:hover {
 .the_big_black .module_container {
   grid-column-start: 2;
   background: white;
-  height: 650px;
-  margin-top: 7.8rem;
+  height: max-content;
+  margin-top: 5rem;
   border-radius: 18px;
 }
 
@@ -294,6 +356,43 @@ div.city-contaier:hover {
   color: gray;
   font-weight: 100;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.the_big_black .module_container .module_mid {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.module_txt {
+  padding: 1rem 2rem;
+}
+
+.module_txt p {
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+  font-weight: 400;
+  color: rgb(110, 110, 110);
+}
+
+.the_big_black .module_container form {
+  padding: 1rem 2rem;
+  padding-bottom: 0;
+}
+
+.or_container .or_line {
+  height: 1px;
+  background: rgb(210, 210, 210);
+  width: 250px;
+}
+
+.or_container p {
+  padding: 0.5rem;
+}
+
+.module_bot {
+  padding: 0 2rem;
 }
 
 /* div#container{
@@ -310,7 +409,7 @@ div#container div#right{
   height: 10rem;
   background: rgba(33, 3, 58, 0.3);
 } */
-footer{
+footer {
   width: 100vw;
   background: rgba(19, 0, 38, 1);
   color: rgba(255, 255, 255, 0.6);
@@ -323,16 +422,16 @@ footer{
 }
 
 .orange {
-color: #f57318;;
+  color: #f57318;
 }
 
 .orange-hover:hover {
   color: #f57318;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
 }
 .white-hover:hover {
   color: white;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
 }
 
 .dark {

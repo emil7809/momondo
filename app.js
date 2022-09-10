@@ -6,9 +6,11 @@ function show_from_results() {
   } else {
     document.querySelector("#from-results").style.display = "none";
   }
-}
-function show_from_results_focus() {
-  document.querySelector("#from-results").style.display = "block";
+
+  document.addEventListener("click", function(event){
+    if (event.target.closest("#from-results")) return
+    document.querySelector("#from-results").style.display = "none";
+  });
 }
 
 function hide_from_results() {
@@ -25,6 +27,11 @@ function show_to_results() {
   } else {
     document.querySelector("#to-results").style.display = "none";
   }
+
+  document.addEventListener("click", function(event){
+    if (event.target.closest("#from-results")) return
+    document.querySelector("#from-results").style.display = "none";
+  });
 }
 
 function hide_to_results() {
