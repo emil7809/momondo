@@ -1,4 +1,3 @@
-      
       <div id="trip_details">
         <div>
           <p>Round-Trip</p>
@@ -21,27 +20,21 @@
       <form id="flight_form">
 
         <div id="from-container">
-        <div class="input-caontainer">
-          <?= $_airplane ?>
-           <input id="from-input" type="text" placeholder="From?"
-              oninput="show_from_results()"
-              onfocus="show_from_results_focus()"
-            >
-        </div>
-        <div id="from-results"></div>
+          <div class="input-caontainer">
+            <?= $_airplane ?>
+            <input id="from-input" type="text" placeholder="From?" oninput="show_from_results()" onfocus="show_from_results_focus()">
+          </div>
+          <div id="from-results"></div>
         </div>
         <div id="switch">
           <?= $_arrows ?>
         </div>
 
         <div id="to-container">
-        <div class="input-caontainer">
+          <div class="input-caontainer">
             <?= $_airplane ?>
-            <input id="to-input" type="text" placeholder="To?"
-              oninput="show_to_results()"
-              onblur="hide_to_results()"
-            >
-        </div>
+            <input id="to-input" type="text" placeholder="To?" oninput="show_to_results()" onblur="hide_to_results()">
+          </div>
           <div id="to-results"></div>
         </div>
 

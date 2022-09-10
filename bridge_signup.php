@@ -1,4 +1,3 @@
 <?php
-  header('Location: signin.php');
-  exit();
-?>
+header('Location: signin.php');
+exit();

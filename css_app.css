@@ -280,6 +280,22 @@ div.city-contaier:hover {
   border-radius: 18px;
 }
 
+.the_big_black .module_container .module_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.the_big_black .module_container .module_top .module_logo {
+  margin: 1.2rem;
+}
+
+.the_big_black .module_container .module_top .x {
+  margin: 0.8rem;
+  color: gray;
+  font-weight: 100;
+  cursor: pointer;
+}
+
 /* div#container{
   display: flex;
   width: 100vw;
