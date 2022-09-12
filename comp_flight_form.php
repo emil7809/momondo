@@ -19,6 +19,15 @@
 
       <form id="flight_form">
 
+        <?php
+        if ($_title == 'Momondo') {
+          echo ' <div id="from_to_container" class="blue_border">';
+        }
+        if ($_title == 'Flight Search') {
+          echo ' <div id="from_to_container">';
+        } ?>
+
+
         <div id="from-container">
           <div class="input-caontainer">
             <?= $_airplane ?>
@@ -26,10 +35,16 @@
           </div>
           <div id="from-results"></div>
         </div>
-        <div id="switch">
-          <?= $_arrows ?>
-        </div>
+        <?php
+        if ($_title == 'Momondo') {
+          echo '<div id="switch" class="switch_blue_border">';
+        }
+        if ($_title == 'Flight Search') {
+          echo '<div id="switch">';
+        } ?>
 
+        <?= $_arrows ?>
+        </div>
         <div id="to-container">
           <div class="input-caontainer">
             <?= $_airplane ?>
@@ -37,13 +52,28 @@
           </div>
           <div id="to-results"></div>
         </div>
-
-        <div id="time_container">
-          <div class="input-caontainer">
-            <input type="date">
-            <div class="line"></div>
-            <input type="date">
-          </div>
         </div>
-        <button type="button">Search</button>
+        <?php
+        if ($_title == 'Momondo') {
+          echo '<div id="time_container" class="blue_border">';
+        }
+        if ($_title == 'Flight Search') {
+          echo '<div id="time_container">';
+        } ?>
+
+        <div class="input-caontainer">
+          <input type="date">
+          <div class="line"></div>
+          <input type="date">
+        </div>
+        </div>
+        <?php
+        if ($_title == 'Momondo') {
+          echo '<button type="button" class="button_type_3">Search</button>';
+        }
+        if ($_title == 'Flight Search') {
+          echo '<button type="button">Search</button>';
+        } ?>
+
+
       </form>

@@ -15,24 +15,24 @@ body {
 
 .center_container {
   display: grid;
-  grid-template-columns: 1fr 900px 1fr;
+  justify-content: center;
 }
 
 .center_container > * {
   grid-column-start: 2;
 }
 
-.center_container_wide {
+/* .center_container_wide {
   display: grid;
-  grid-template-columns: 1fr 1200px 1fr;
-}
+} */
 
-.center_container_wide > * {
+/* .center_container_wide > * {
   grid-column-start: 2;
-}
+} */
 
 .input-caontainer {
   height: 3rem;
+  width: 100%;
   padding: 0 1rem;
   border-radius: 8px;
   font-family: CeraPro-Regular, "Cera Pro", sans-serif;
@@ -43,6 +43,7 @@ body {
   background-color: #f3f0f5;
   border: 1px solid #f3f0f5;
   display: flex;
+  margin-top: 0.2rem;
 }
 
 input {
@@ -74,7 +75,8 @@ input {
 }
 
 .button_type_1,
-.button_type_2 {
+.button_type_2,
+.button_type_3 {
   all: unset;
   background: linear-gradient(
     80deg,
@@ -84,13 +86,14 @@ input {
   width: 100%;
   border-radius: 5px;
   padding: 0.5rem 0;
-  color: white;
+  color: white !important;
   font-weight: 600;
   font-size: 0.9rem;
   text-align: center;
   font-family: "Cera Pro", sans-serif;
-  margin-top: 0.5rem;
+  /*  margin-top: 0.5rem; */
   cursor: pointer;
+  border: none !important;
 }
 
 .button_type_1:hover {
@@ -112,6 +115,14 @@ input {
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 100;
+}
+
+.button_type_3 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100% !important;
+  padding: 1rem !important;
+  font-size: 0.8rem !important;
 }
 
 .error_style {
@@ -238,12 +249,23 @@ div#trip_details p {
 }
 
 #flight_form {
-  display: flex;
+  display: grid;
+  /* justify-items: center; */
+}
+
+.blue_border {
+  background-color: #0095cc;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.switch_blue_border {
+  border: 5px solid #0095cc !important;
 }
 
 #flight_form div#from-container div#from-results {
   display: none;
-  width: 480px;
+  width: 455px;
   background: white;
   border-radius: 8px;
   margin-top: 8px;
@@ -298,18 +320,30 @@ div.city-contaier:hover {
 }
 
 #flight_form div#switch {
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
+  /*   height: 3rem;
+  width: 3rem; */
   background-color: #f3f0f5;
   border: 1px solid #f3f0f5;
   border-radius: 8px;
-  margin: 0 0.5rem;
+  /* margin: 0 0.5rem; */
   cursor: pointer;
+
+  place-self: end;
+  top: 270px;
+  margin-right: 1rem;
+  position: absolute;
+  transform: rotate(90deg);
+}
+
+#flight_form #from_to_container {
+  display: grid;
 }
 
 #flight_form div#to-container div#to-results {
   display: none;
-  width: 480px;
+  width: 455px;
   background: white;
   border-radius: 8px;
   margin-top: 8px;
@@ -319,7 +353,11 @@ div.city-contaier:hover {
 }
 
 #flight_form div#time_container {
-  margin-left: 0.5rem;
+  padding-top: 0;
+}
+
+#flight_form div#time_container > * {
+  margin-top: 0;
 }
 
 #flight_form button {
@@ -334,11 +372,14 @@ div.city-contaier:hover {
   border: 1px solid #f3f0f5;
   display: flex;
   align-items: center;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  height: 3rem;
 }
 .the_big_black {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: rgba(33, 3, 58, 0.5);
   margin-top: -3.6rem;
   position: relative;
@@ -438,6 +479,7 @@ footer {
   background: rgba(19, 0, 38, 1);
   color: rgba(255, 255, 255, 0.6);
   padding: 2rem 1rem;
+  margin-top: 5rem;
 }
 
 .flex {
@@ -474,4 +516,61 @@ footer {
   background: black;
   margin: 0 1rem;
   align-self: center;
+}
+
+@media screen and (min-width: 700px) {
+  #flight_form #from_to_container {
+    display: flex;
+  }
+
+  #flight_form div#switch {
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.5rem;
+    margin-right: 0.5rem;
+    position: static;
+    transform: rotate(0deg);
+  }
+
+  .switch_blue_border {
+    border: none !important;
+    background-color: rgba(255, 255, 255, 0.7) !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .input-caontainer {
+    padding: 0;
+  }
+  #flight_form {
+    display: flex;
+    align-items: center;
+  }
+
+  #flight_form div#time_container {
+    padding: 0;
+    padding: 7px;
+  }
+
+  #flight_form div#time_container > * {
+    margin: 0;
+    padding: 7px;
+  }
+
+  #flight_form div#switch {
+    padding: 3px;
+  }
+
+  #flight_form button {
+    margin-left: 0.5rem;
+    margin-top: 0;
+  }
+
+  .blue_border {
+    padding: 7px;
+  }
+
+  .blue_border > * > * {
+    margin: 0;
+  }
 }

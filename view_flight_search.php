@@ -2,7 +2,7 @@
 require_once __DIR__ . '/comp_header.php'; ?>
 
 <div id="flights-search">
-  <div class="center_container_wide">
+  <div class="center_container">
     <?php require_once __DIR__ . '/comp_flight_form.php'; ?>
   </div>
 </div>
