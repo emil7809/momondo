@@ -18,9 +18,9 @@ body {
   justify-content: center;
 }
 
-.center_container > * {
+/* .center_container > * {
   grid-column-start: 2;
-}
+} */
 
 /* .center_container_wide {
   display: grid;
