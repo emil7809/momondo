@@ -1,4 +1,7 @@
 <?php $_title = 'Momondo';
+if (empty(session_id()) && !headers_sent()) {
+  session_start();
+}
 require_once __DIR__ . '/comp_header.php'; ?>
 
 <div class="center_container">
