@@ -43,7 +43,7 @@ body {
   background-color: #f3f0f5;
   border: 1px solid #f3f0f5;
   display: flex;
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
 }
 
 input {
@@ -255,8 +255,19 @@ div#trip_details p {
 
 .blue_border {
   background-color: #0095cc;
-  padding: 4px;
-  border-radius: 4px;
+  border-radius: 8px;
+  /* padding: 4px;
+  border-radius: 4px; */
+  padding: 0 0.3rem;
+}
+
+.blue_border:first-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.blue_border:nth-child(2) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .switch_blue_border {
@@ -357,7 +368,7 @@ div.city-contaier:hover {
 }
 
 #flight_form div#time_container > * {
-  margin-top: 0;
+  margin: 0.3rem 0;
 }
 
 #flight_form button {
@@ -551,6 +562,10 @@ footer {
     align-items: center;
   }
 
+  #flight_form #from_to_container:first-child {
+    padding: 7px;
+  }
+
   #flight_form div#time_container {
     padding: 0;
     padding: 7px;
@@ -571,10 +586,22 @@ footer {
   }
 
   .blue_border {
-    padding: 7px;
+    /* padding: 0.3rem; */
   }
 
   .blue_border > * > * {
     margin: 0;
+  }
+
+  .blue_border:first-child {
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0;
+  }
+  .blue_border:nth-child(2) {
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 8px;
   }
 }
