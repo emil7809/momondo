@@ -24,6 +24,9 @@ require_once __DIR__ . '/comp_header.php'; ?>
             <div class="input-caontainer2"><input name="email" type="text" placeholder="Email address" onfocus="clean_input()"></div>
 
             <div class="input-caontainer2">
+
+                <!--                 <input name="user_password" type="password" placeholder="Password" onfocus="clean_input()" maxlength="<?= _USER_NAME_MAX_LEN ?>" data-validate="str" data-min="<?= _USER_NAME_MIN_LEN ?>" data-max="<?= _USER_NAME_MAX_LEN ?>">
+ -->
                 <input name="user_password" type="password" placeholder="Password" onfocus="clean_input()">
             </div>
             <button class="button_type_1">Sign in</button>
@@ -57,6 +60,9 @@ require_once __DIR__ . '/comp_header.php'; ?>
         })
         if (!conn.ok) {
             document.querySelector(".error").style.display = "flex"
+            document.querySelector("[name='email']").style.display = "none"
+
+
             /*  document.querySelector(".input-caontainer2").classList.add("validate_error") 
             const data = conn.json()
             console.log(data.error)*/
