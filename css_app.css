@@ -203,7 +203,8 @@ nav #logo_container button:hover path {
   display: block;
 }
 
-nav a {
+nav a,
+footer a {
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -565,13 +566,94 @@ div#container div#right{
 footer {
   width: 100vw;
   background: rgba(19, 0, 38, 1);
-  color: rgba(255, 255, 255, 0.6);
-  padding: 2rem 1rem;
+  padding: 3.5rem 2rem;
   margin-top: 5rem;
+  color: white;
+}
+
+footer h4 {
+  font-family: "cerapro-regular", sans-serif;
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+footer a {
+  padding: 0;
+  padding-bottom: 0.7rem;
+  font-size: 0.7rem;
+  font-weight: 100;
+  inline-size: 100px;
+  word-wrap: break-word;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer .top .grid {
+  min-width: 100px;
+}
+
+footer .mid {
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
+}
+footer .mid .border_button {
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
+  margin: 1.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .mid .border_button:hover {
+  border-color: rgb(140, 63, 204);
+}
+
+footer .mid .border_button h5,
+footer .mid .border_button p,
+footer .bot p {
+  font-size: 0.7rem;
+  font-weight: 100;
+  padding: 0.5rem 0;
+}
+
+footer .mid .border_button p {
+  text-transform: uppercase;
+  letter-spacing: 0.23em;
+}
+
+footer .mid .border_button svg {
+  transform: rotate(-90deg);
+  padding: 0.15rem;
+}
+
+footer .bot p {
+  color: gray;
+  padding: 0.5rem 1rem;
+}
+
+footer .bot .flex {
+  justify-content: center;
+}
+
+footer .bot {
+  padding-bottom: 4rem;
 }
 
 .flex {
   display: flex;
+  align-items: center;
+}
+.grid {
+  display: grid;
   align-items: center;
 }
 
@@ -643,14 +725,30 @@ footer {
     border: none;
     background-color: rgba(255, 255, 255, 0.7);
   }
+
+  footer .top {
+    max-width: 600px;
+  }
+
+  footer .mid h4 {
+    display: block !important;
+    padding-bottom: 0;
+  }
+
+  footer .bot {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 900px) {
-  main#index {
+  main#index,
+  footer {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr 800px 1fr;
   }
-  main#index .center_container {
+  main#index .center_container,
+  footer .center_container {
     grid-column: 2;
   }
   #flight_form {
@@ -690,5 +788,53 @@ footer {
   #flight_form button {
     margin-left: 0.5rem;
     margin-top: 0;
+  }
+
+  footer #top_mid_container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+  }
+
+  footer .mid {
+    padding-top: 0;
+  }
+
+  footer .mid .border_button {
+    border: 1px white solid;
+    border-radius: 4px;
+    padding: 0 1rem;
+  }
+  footer .mid .border_button h5 {
+    display: none;
+  }
+  footer .mid .border_button p {
+    text-transform: unset;
+    padding-left: 0.5rem;
+  }
+
+  footer .mid .border_button img {
+    display: block !important;
+  }
+
+  footer .mid .border_button #pund-icon {
+    padding: 0.2rem;
+    filter: invert(100%);
+  }
+
+  footer .mid .border_button svg {
+    transform: unset;
+    padding: 0.15rem;
+  }
+  footer #footer_img {
+    display: block !important;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  main#index,
+  footer {
+    grid-template-columns: 1fr 1200px 1fr;
   }
 }
