@@ -1,11 +1,8 @@
-<?php $_title = 'Sign in';
-require_once __DIR__ . '/comp_header.php'; ?>
-
 <div class="the_big_black">
     <div class="module_container">
         <div class="module_top">
             <img class="module_logo" width="180px" src="img/momondo.png" alt="momondo.png">
-            <a href="/" class="x">X</a>
+            <a onclick="toggle_module()" class="x">X</a>
         </div>
         <div class="module_mid">
             <img src="https://content.r9cdn.net/res/images/horizon/ui/authentication/brands/momondo/magiclinkloginBg.svg?v=8a0eeb39f4df5084a227975496344e70866f4075&amp;cluster=5" alt="sign in img">
@@ -24,9 +21,6 @@ require_once __DIR__ . '/comp_header.php'; ?>
             <div class="input-caontainer2"><input name="email" type="text" placeholder="Email address" onfocus="clean_input()"></div>
 
             <div class="input-caontainer2">
-
-                <!--                 <input name="user_password" type="password" placeholder="Password" onfocus="clean_input()" maxlength="<?= _USER_NAME_MAX_LEN ?>" data-validate="str" data-min="<?= _USER_NAME_MIN_LEN ?>" data-max="<?= _USER_NAME_MAX_LEN ?>">
- -->
                 <input name="user_password" type="password" placeholder="Password" onfocus="clean_input()">
             </div>
             <button class="button_type_1">Sign in</button>
@@ -74,5 +68,3 @@ require_once __DIR__ . '/comp_header.php'; ?>
         window.location.replace('bridge_signin.php');
     }
 </script>
-
-<?php require_once __DIR__ . '/comp_footer.php' ?>

@@ -21,6 +21,7 @@ if (empty(session_id()) && !headers_sent()) {
 </head>
 
 <body oncontextmenu="toggle_menu(); return false">
+  <?php require_once __DIR__ . '/comp_signin.php'; ?>
   <div id="menu_container" onclick="toggle_menu()">
     <div id="menu"></div>
   </div>
@@ -50,17 +51,9 @@ if (empty(session_id()) && !headers_sent()) {
 
         <div class="toggle_700_flex" id="login-button">
           <?= $_man ?>
-          <?php
-          ini_set('display_errors', 0);
-          session_start();
-          if (!$_SESSION) {
-            echo ' <a class="login-letteres" href="signin">Sign in</a> ';
-          }
-          if ($_SESSION) {
-            echo ' <a class="login-letteres" href="bridge_signout.php">' . $_SESSION['user_name'] . '</a>';
-          }
+          <a class="login-letteres" onclick="toggle_module()">Sign in</a>
 
-          ?>
+
         </div>
 
         <a href="signin" class="toggle_mobile">

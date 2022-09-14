@@ -12,6 +12,16 @@ function toggle_menu() {
     burger.style.display = "none"
   }
 }
+function toggle_module() {
+  const sing_module = document.querySelector(".the_big_black");
+  if (sing_module.classList.contains("show")) {
+    sing_module.classList.remove("show");
+    
+  } else {
+    sing_module.classList.add("show");
+    
+  }
+}
 
 function show_from_results() {
   const the_input = document.querySelector("#from-input");
