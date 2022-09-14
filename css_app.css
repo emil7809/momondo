@@ -585,9 +585,9 @@ footer {
     margin-top: 0;
   }
 
-  .blue_border {
-    /* padding: 0.3rem; */
-  }
+  /*  .blue_border {
+     padding: 0.3rem; 
+  } */
 
   .blue_border > * > * {
     margin: 0;
