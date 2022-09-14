@@ -21,31 +21,14 @@ require_once __DIR__ . '/svgs.php';
     <nav>
       <div id="logo_container">
         <a href="/"><img id="logo" src="img/momondo.png" alt="momondo.png"></a>
-        <?php
-        if ($_title == 'Momondo') {
-          echo $_mini_logo;
-        }
-        ?>
       </div>
 
       <div class="flex">
 
-        <?php
-        if ($_title == 'Flight Search') {
-          echo '<a href="flight_search" class="orange white-hover">Flights Search</a>';
-        } else {
-          echo '<a href="flight_search" class="orange-hover">Flights Search</a>';
-        }
+        <a href="flight_search" class="orange-hover">Flights Search</a>
 
-        ?>
 
-        <?php
-        if ($_title == 'Trips') {
-          echo '<a href="trips" class="orange white-hover">Trips</a>';
-        } else {
-          echo '<a href="trips" class="orange-hover">Trips</a>';
-        }
-        ?>
+        <a href="trips" class="orange-hover">Trips</a>
 
         <div class="flex" id="login-button">
           <svg id="man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">

@@ -1,3 +1,19 @@
+function toggle_menu() {
+  console.log("lålå")
+  const domMenu = document.querySelector("#menu_container");
+  const burger = document.querySelector("#burger");
+  const x = document.querySelector("#burger_x");
+  if (domMenu.classList.contains("active")) {
+    domMenu.classList.remove("active");
+    x.style.display = "none"
+    burger.style.display = "block"
+  } else {
+    domMenu.classList.add("active");
+    x.style.display = "block"
+    burger.style.display = "none"
+  }
+}
+
 function show_from_results() {
   const the_input = document.querySelector("#from-input");
   if (the_input.value.length > 0) {
