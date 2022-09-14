@@ -1,4 +1,4 @@
-<div class="the_big_black">
+<div class="the_big_black" style="display:none;">
     <div class="module_container">
         <div class="module_top">
             <img class="module_logo" width="180px" src="img/momondo.png" alt="momondo.png">
@@ -31,7 +31,7 @@
             <div class="or_line"></div>
         </div>
         <div class="module_bot">
-            <a href="signup"><button class="button_type_2">Sign Up</button> </a>
+            <a onclick="toggle_module2()"><button class="button_type_2">Sign Up</button> </a>
         </div>
         <div class="module_txt">
             <p>By signing up you accept our terms of use and privacy policy.</p>

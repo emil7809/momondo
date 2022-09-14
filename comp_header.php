@@ -22,6 +22,7 @@ if (empty(session_id()) && !headers_sent()) {
 
 <body oncontextmenu="toggle_menu(); return false">
   <?php require_once __DIR__ . '/comp_signin.php'; ?>
+  <?php require_once __DIR__ . '/comp_signup.php'; ?>
   <div id="menu_container" onclick="toggle_menu()">
     <div id="menu"></div>
   </div>
@@ -56,7 +57,7 @@ if (empty(session_id()) && !headers_sent()) {
 
         </div>
 
-        <a href="signin" class="toggle_mobile">
+        <a onclick="toggle_module()" class="toggle_mobile">
           <?= $_man ?>
         </a>
 

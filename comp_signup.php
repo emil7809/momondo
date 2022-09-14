@@ -1,6 +1,3 @@
-<?php $_title = 'Sign up';
-require_once __DIR__ . '/comp_header.php'; ?>
-
 <div class="the_big_black">
     <div class="module_container">
         <div class="module_top">
@@ -86,5 +83,3 @@ require_once __DIR__ . '/comp_header.php'; ?>
     }
 </script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<?php require_once __DIR__ . '/comp_footer.php' ?>

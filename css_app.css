@@ -450,10 +450,7 @@ div.city-contaier:hover {
   width: 100%;
   height: 100%;
   background: rgba(33, 3, 58, 0.5);
-  display: grid;
-  grid-template-columns: 1fr 500px 1fr;
-  z-index: 99999999999999999;
-  display: grid;
+  z-index: 99999999;
 }
 
 .the_big_black.show {
@@ -465,8 +462,8 @@ div.city-contaier:hover {
   background: white;
   height: max-content;
   margin: 5rem 1rem;
-
   border-radius: 18px;
+  max-width: 600px;
 }
 
 .the_big_black .module_container .module_top {
@@ -659,7 +656,11 @@ footer .bot {
   margin: 0 1rem;
   align-self: center;
 }
-
+@media screen and (min-width: 600px) {
+  .the_big_black.show {
+    display: grid !important;
+  }
+}
 @media screen and (min-width: 750px) {
   h1 {
     text-align: left;
