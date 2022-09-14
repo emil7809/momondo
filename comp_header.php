@@ -1,6 +1,11 @@
 <?php
 require_once __DIR__ . '/_x.php';
 require_once __DIR__ . '/svgs.php';
+########################################
+if (empty(session_id()) && !headers_sent()) {
+  session_start();
+}
+############################################
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,26 +20,36 @@ require_once __DIR__ . '/svgs.php';
   <link rel="stylesheet" href="app.css">
 </head>
 
-<body oncontextmenu="return false;">
-
+<body oncontextmenu="toggle_menu(); return false">
+  <div id="menu_container" onclick="toggle_menu()">
+    <div id="menu"></div>
+  </div>
   <header>
     <nav>
       <div id="logo_container">
-        <a href="/"><img id="logo" src="img/momondo.png" alt="momondo.png"></a>
+        <button id="burger" onclick="toggle_menu()">
+          <?= $_burger  ?>
+        </button>
+        <button id="burger_x" style="display:none;" onclick="toggle_menu()">
+          <?= $_burger_x  ?>
+        </button>
+
+        <a class="toggle_mobile" href="/">
+          <?= $_mini_logo  ?>
+        </a>
+        <a href="/"><img id="logo" class="toggle_700" src="img/momondo.png" alt="momondo.png" /></a>
+
       </div>
 
       <div class="flex">
 
-        <a href="flight_search" class="orange-hover">Flights Search</a>
+
 
 
         <a href="trips" class="orange-hover">Trips</a>
 
-        <div class="flex" id="login-button">
-          <svg id="man" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-            <path d="M180 100c0-44.1-35.9-80-80-80s-80 35.9-80 80s35.9 80 80 80s80-35.9 80-80zm-80-70c38.6 0 70 31.4 70 70c0 16.3-5.6 31.3-15 43.2c-.5-.7-1-1.4-1.7-2c-3.2-3.1-17.3-7.1-27.3-9.6c9.5-10.2 13.9-25.5 13.9-38.3c0-28.7-13.5-43.3-40-43.3s-40 14.6-40.1 43.3c0 12.8 4.4 28.1 13.9 38.3c-9.9 2.5-24 6.5-27.2 9.5c-.6.6-1.2 1.2-1.7 2C35.6 131.2 30 116.2 30 100c0-38.6 31.4-70 70-70zM52 150.9c.6-1.4 1.1-2.1 1.3-2.4c3.4-2.2 25.1-8 32.5-9.5c4.5-.9 5.5-7 1.4-9.3c-10.4-5.8-17.4-20.5-17.4-36.4C70 70 79 60 100 60c20.7 0 30 10.3 30 33.3c0 15.7-7.2 30.7-17.4 36.4c-4 2.2-3.1 8.3 1.4 9.2c9.6 2.1 29.4 7.4 32.6 9.5c.3.3.8 1.1 1.4 2.4c-27.1 25.5-69 25.6-96 .1z"></path>
-          </svg>
-
+        <div class="toggle_700_flex" id="login-button">
+          <?= $_man ?>
           <?php
           ini_set('display_errors', 0);
           session_start();
@@ -48,12 +63,14 @@ require_once __DIR__ . '/svgs.php';
           ?>
         </div>
 
+        <a href="signin" class="toggle_mobile">
+          <?= $_man ?>
+        </a>
+
         <div class="flex">
-          <img id="denmark-icon" src="img/denmark-icon.png" alt="denmark icon">
-          <a href="danish" id="dansk" class="orange-hover">Dansk</a>
+          <img id="denmark-icon" src="img/denmark-icon.png" alt="denmark icon" />
+          <a href="danish" id="dansk" class="orange-hover toggle_700">Dansk</a>
         </div>
       </div>
     </nav>
   </header>
-
-  <main>

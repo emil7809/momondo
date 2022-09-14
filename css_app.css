@@ -14,7 +14,8 @@ body {
 }
 
 .center_container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -42,7 +43,11 @@ body {
   color: #150127;
   background-color: #f3f0f5;
   border: 1px solid #f3f0f5;
-  display: flex;
+  /* display: flex; */
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+
   margin-top: 0.3rem;
 }
 
@@ -138,7 +143,8 @@ input {
 h1 {
   font-family: CeraPro-Bold, "Cera Pro", sans-serif;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.34rem;
+  text-align: center;
   color: white;
   padding-top: 2.8rem;
 }
@@ -272,6 +278,37 @@ nav #logo {
   cursor: pointer;
 }
 
+main#index {
+  padding: 0 3rem;
+}
+
+main#index h1 {
+  padding: 2rem 1rem;
+}
+
+main#index #from_to_container,
+main#index #time_container {
+  background-color: #0095cc;
+  border-radius: 6px;
+  padding: 0 0.3rem;
+}
+
+main#index #from_to_container {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+main#index #time_container {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+main#index #flight_form {
+  position: relative;
+}
+main#index #flight_form div#switch {
+  border: 5px solid #0095cc;
+  top: 40px;
+}
+
 div#flights-search {
   /* width: 100vw; */
   height: 20rem;
@@ -281,21 +318,25 @@ div#flights-search {
 
 div#trip_details {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   padding: 0.5rem 0;
   padding-top: 2rem;
+  padding-top: 0.1rem;
 }
 
 div#trip_details > * {
   display: flex;
-  align-items: center;
+  align-items: start;
   margin-right: 1rem;
 }
 
 div#trip_details p {
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.08em;
+  padding-bottom: 1rem;
 }
 
 #flight_form {
@@ -303,11 +344,11 @@ div#trip_details p {
   /* justify-items: center; */
 }
 
-.blue_border {
+/* .blue_border {
   background-color: #0095cc;
   border-radius: 8px;
   /* padding: 4px;
-  border-radius: 4px; */
+  border-radius: 4px; */ /*
   padding: 0 0.3rem;
 }
 
@@ -318,11 +359,11 @@ div#trip_details p {
 .blue_border:nth-child(2) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-}
+} */
 
-.switch_blue_border {
+/* .switch_blue_border {
   border: 5px solid #0095cc !important;
-}
+} */
 
 #flight_form div#from-container div#from-results {
   display: none;
@@ -584,6 +625,11 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
+  h1 {
+    text-align: left;
+    padding-left: 0 !important;
+    font-size: 1.8rem;
+  }
   .toggle_700 {
     display: block;
   }
@@ -597,57 +643,40 @@ footer {
   #flight_form #from_to_container {
     display: flex;
   }
+  #flight_form #from_to_container > * {
+    flex-grow: 1;
+  }
 
   #flight_form div#switch {
     height: 3rem;
     width: 3rem;
+    flex-grow: unset;
     margin: 0 0.5rem;
     margin-right: 0.5rem;
     position: static;
     transform: rotate(0deg);
   }
 
-  .switch_blue_border {
-    border: none !important;
-    background-color: rgba(255, 255, 255, 0.7) !important;
+  main#index #flight_form div#switch {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .input-caontainer {
-    padding: 0;
-  }
   #flight_form {
     display: flex;
     align-items: center;
   }
 
-  #flight_form #from_to_container:first-child {
-    padding: 7px;
-  }
-
   #flight_form div#time_container {
-    padding: 0;
-    padding: 7px;
-  }
-
-  #flight_form div#time_container > * {
-    margin: 0;
-    padding: 7px;
-  }
-
-  #flight_form div#switch {
-    padding: 3px;
+    display: flex;
   }
 
   #flight_form button {
     margin-left: 0.5rem;
     margin-top: 0;
   }
-
-  /*  .blue_border {
-     padding: 0.3rem; 
-  } */
 
   .blue_border > * > * {
     margin: 0;

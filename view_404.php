@@ -5,5 +5,5 @@ require_once __DIR__ . '/comp_header.php'; ?>
     <h1>Sorry This page does not exist</h1>
 </div>
 
-<script src="app.js"></script>
+
 <?php require_once __DIR__ . '/comp_footer.php' ?>
