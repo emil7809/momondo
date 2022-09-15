@@ -72,6 +72,61 @@
 </footer>
 
 <script src="app.js"></script>
+<script>
+    function clean_input() {
+        document.querySelector(".error").style.display = "none";
+        document
+            .querySelector(".input-caontainer2")
+            .classList.remove("validate_error");
+    }
+
+    async function validateSingin() {
+        console.log("validateSingin")
+        const frm = document.querySelector("#signin_form");
+        const conn = await fetch("api-validate-user.php", {
+            method: "POST",
+            body: new FormData(frm),
+        });
+        if (!conn.ok) {
+            document.querySelector(".error").style.display = "flex";
+            /* document.querySelector("[name='user_email']").classList.add("validate_error") */
+            console.log("Error");
+            return;
+        }
+
+        console.log("Succsess");
+        window.location.replace("bridge_signin.php");
+    }
+
+    async function validateSignup() {
+        const frm = document.querySelector("#signup_module");
+        const conn = await fetch("api-validate.php", {
+            method: "POST",
+            body: new FormData(frm),
+        });
+        if (!conn.ok) {
+            /*  document.querySelector(".error").style.display = "flex"
+               document.querySelector(".input-caontainer2").classList.add("validate_error") */
+            console.log("Error");
+            return;
+        }
+
+        //const data = await conn.json(); // Convert text to JSON
+        // Success
+        console.log("Success");
+        Swal.fire({
+            icon: "success",
+            title: "Welcome " + data.user_name + "!",
+            html: "You account has been created!",
+            confirmButtonText: "Sign in",
+        }).then(() => {
+            window.location.replace("signin");
+        });
+
+        /* window.location.replace('/'); */
+    }
+</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

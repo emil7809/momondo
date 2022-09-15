@@ -5,11 +5,11 @@ $correct_email = 'a@a.com';
 $correct_password = '123';
 
 // VALIDATE
-_validate_email();
+_validate_user_email();
 
 
 // Check if the user's email matches the correct email
-if ($_POST['email']  != $correct_email) {
+if ($_POST['user_email']  != $correct_email) {
     http_response_code(400);
     exit();
 }

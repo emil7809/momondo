@@ -1,11 +1,11 @@
-<div class="the_big_black">
-    <div class="module_container">
+<div class="the_big_black2">
+    <div id="signup_module" class="module_container" style="display:none;">
         <div class="module_top">
             <div class="back flex">
                 <?= $_back_arrow ?>
                 <a href="signin">Back</a>
             </div>
-            <a href="/" class="x">X</a>
+            <a onclick="toggle_module()" class="x">X</a>
         </div>
 
 

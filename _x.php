@@ -91,17 +91,17 @@ function _validate_user_last_name()
 
 // ##############################
 
-function _validate_email()
+function _validate_user_email()
 {
-    $error_message = 'email missing or invalid';
-    if (!isset($_POST['email'])) {
+    $error_message = 'user_email missing or invalid';
+    if (!isset($_POST['user_email'])) {
         _respond($error_message, 400);
     }
-    $_POST['email'] = trim($_POST['email']);
-    if (!preg_match(_REGEX_EMAIL, $_POST['email'])) {
+    $_POST['user_email'] = trim($_POST['user_email']);
+    if (!preg_match(_REGEX_EMAIL, $_POST['user_email'])) {
         _respond($error_message, 400);
     }
-    return $_POST['email'];
+    return $_POST['user_email'];
 }
 
 // ##############################

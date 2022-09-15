@@ -2,10 +2,11 @@
 require_once __DIR__ . '/_x.php';
 require_once __DIR__ . '/svgs.php';
 ########################################
-if (empty(session_id()) && !headers_sent()) {
+/* if (empty(session_id()) && !headers_sent()) {
   session_start();
-}
+} */
 ############################################
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,6 @@ if (empty(session_id()) && !headers_sent()) {
 
 <body oncontextmenu="toggle_menu(); return false">
   <?php require_once __DIR__ . '/comp_signin.php'; ?>
-  <?php require_once __DIR__ . '/comp_signup.php'; ?>
   <div id="menu_container" onclick="toggle_menu()">
     <div id="menu"></div>
   </div>
@@ -52,7 +52,17 @@ if (empty(session_id()) && !headers_sent()) {
 
         <div class="toggle_700_flex" id="login-button">
           <?= $_man ?>
-          <a class="login-letteres" onclick="toggle_module()">Sign in</a>
+          <?php
+          ini_set('display_errors', 0);
+          session_start();
+          if (!$_SESSION) {
+            echo '<a class="login-letteres" onclick="toggle_module()">Sign in</a>';
+          }
+          if ($_SESSION) {
+            echo '<a class="login-letteres" href="/bridge_signout.php">Emily</a>';
+          }
+          ?>
+
 
 
         </div>
