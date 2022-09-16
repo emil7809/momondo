@@ -212,8 +212,10 @@ footer a {
   padding: 15px 15px;
 }
 
-nav #denmark-icon {
+nav #flag-icon {
   padding-left: 15px;
+  width: 30px;
+  height: 10px;
 }
 
 nav #man-icon {
@@ -346,6 +348,11 @@ div#trip_details p {
   position: absolute;
   padding: 1rem;
   z-index: 999999;
+}
+
+#flight_form button {
+  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 div.city-contaier {

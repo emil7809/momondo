@@ -1,11 +1,7 @@
 <?php
 require_once __DIR__ . '/_x.php';
 require_once __DIR__ . '/svgs.php';
-########################################
-/* if (empty(session_id()) && !headers_sent()) {
-  session_start();
-} */
-############################################
+require_once __DIR__ . '/comp_dictionary.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -39,7 +35,7 @@ session_start();
         <a class="toggle_mobile" href="/">
           <?= $_mini_logo  ?>
         </a>
-        <a href="/"><img id="logo" class="toggle_700" src="img/momondo.png" alt="momondo.png" /></a>
+        <a href=<?= '/?language=' . $language ?>><img id="logo" class="toggle_700" src="img/momondo.png" alt="momondo.png" /></a>
 
       </div>
 
@@ -48,7 +44,7 @@ session_start();
 
 
 
-        <a href="trips" class="orange-hover">Trips</a>
+        <a href=<?= 'trips/?language=' . $language ?> class="orange-hover">Trips</a>
 
         <div class="toggle_700_flex" id="login-button">
           <?= $_man ?>
@@ -72,8 +68,27 @@ session_start();
         </a>
 
         <div class="flex">
-          <img id="denmark-icon" src="img/denmark-icon.png" alt="denmark icon" />
-          <a href="danish" id="dansk" class="orange-hover toggle_700">Dansk</a>
+
+          <img id="flag-icon" <?php
+                              if ($language == 'en') {
+                                echo 'src="img/dk-flag.svg"';
+                              }
+                              if ($language == 'dk') {
+                                echo 'src="img/gb-flag.svg"';
+                              }
+                              ?> alt="flag icon" />
+
+
+          <?php
+          if ($language == 'en') {
+            echo '<a id="dansk" href="/?language=dk" class="orange-hover toggle_700">Dansk</a>';
+          }
+          if ($language == 'dk') {
+            echo '<a id="dansk" href="/?language=en" class="orange-hover toggle_700">English</a>';
+          }
+
+          ?>
+
         </div>
       </div>
     </nav>

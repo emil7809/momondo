@@ -3,24 +3,26 @@
         <div id="top_mid_container">
             <div class="top">
                 <div class="grid">
-                    <h4>Company</h4>
-                    <a href="#">About</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Mobile</a>
-                    <a href="#">Discover</a>
-                    <a href="#">How we work</a>
-                    <a href="#">Momondo coupon codes</a>
+                    <h4><?= $dictionary[$language . '_company'] ?></h4>
+                    <a><?= $dictionary[$language . '_about'] ?></a>
+                    <a><?= $dictionary[$language . '_careers'] ?></a>
+                    <a>Mobile</a>
+                    <a>Discover</a>
+                    <a><?= $dictionary[$language . '_how_we_work'] ?></a>
+                    <a><?= $dictionary[$language . '_momondo_coupon_codes'] ?></a>
+
                 </div>
                 <div class="grid">
-                    <h4>Contact</h4>
-                    <a href="#">About</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Mobile</a>
+                    <a><?= $dictionary[$language . '_contact'] ?></a>
+                    <a><?= $dictionary[$language . '_about'] ?></a>
+                    <a><?= $dictionary[$language . '_careers'] ?></a>
+                    <a>Mobile</a>
                 </div>
                 <div class="grid">
-                    <h4>More</h4>
-                    <a href="#">About</a>
-                    <a href="#">Careers</a>
+                    <h4> <a><?= $dictionary[$language . '_more'] ?></a></h4>
+                    <a><?= $dictionary[$language . '_about'] ?></a>
+                    <a><?= $dictionary[$language . '_careers'] ?></a>
+
                 </div>
             </div>
             <div class="mid">
@@ -29,7 +31,7 @@
                     <div>
                         <h5>Site</h5>
                         <div class="flex">
-                            <img id="uk-icon" style="width: 20px; display: none;" src="img/uk-icon.webp" alt="uk icon" />
+                            <img id="uk-icon" style="width: 20px; display: none;" src="img/gb-flag.svg" alt="uk icon" />
                             <p>United Kingdome</p>
                         </div>
                     </div>
