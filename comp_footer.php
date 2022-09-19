@@ -13,26 +13,26 @@
 
                 </div>
                 <div class="grid">
-                    <a><?= $dictionary[$language . '_contact'] ?></a>
+                    <h4><?= $dictionary[$language . '_contact'] ?></h4>
                     <a><?= $dictionary[$language . '_about'] ?></a>
                     <a><?= $dictionary[$language . '_careers'] ?></a>
                     <a>Mobile</a>
                 </div>
                 <div class="grid">
-                    <h4> <a><?= $dictionary[$language . '_more'] ?></a></h4>
+                    <h4> <?= $dictionary[$language . '_more'] ?></h4>
                     <a><?= $dictionary[$language . '_about'] ?></a>
                     <a><?= $dictionary[$language . '_careers'] ?></a>
 
                 </div>
             </div>
             <div class="mid">
-                <h4 style="display: none;">Site / Currency</h4>
+                <h4 style="display: none;"><?= $dictionary[$language . '_site/currencey'] ?></h4>
                 <div class="border_button">
                     <div>
                         <h5>Site</h5>
                         <div class="flex">
-                            <img id="uk-icon" style="width: 20px; display: none;" src="img/gb-flag.svg" alt="uk icon" />
-                            <p>United Kingdome</p>
+                            <img id="flag-footer-icon" style="width: 20px; display: none;" src=<?= $dictionary[$language . '_flag']  ?> alt="uk icon" />
+                            <p><?= $dictionary[$language . '_current_contry']  ?></p>
                         </div>
                     </div>
                     <div>
@@ -44,10 +44,10 @@
                 </div>
                 <div class="border_button">
                     <div>
-                        <h5>Currency</h5>
+                        <h5><?= $dictionary[$language . '_currencey']  ?></h5>
                         <div class="flex">
-                            <img id="pund-icon" style="width: 20px;  display: none;" src="img/pound-icon.webp" alt="pound icon" />
-                            <p>Pound Sterling</p>
+                            <?= $dictionary[$language . '_current_curencey_icon']  ?>
+                            <p><?= $dictionary[$language . '_current_curencey']  ?></p>
                         </div>
                     </div>
                     <div>

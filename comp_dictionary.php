@@ -51,4 +51,19 @@ $dictionary = [
     'en_current_contry' => 'United Kingdome',
     'dk_current_contry' => 'Danmark',
 
+    'en_current_curencey' => 'Pound Sterling',
+    'dk_current_curencey' => 'Danske Kroner',
+
+    'en_current_curencey_icon' => '<img id="pund-icon" style="width: 20px;  display: none;" src="img/pound-icon.webp" alt="pound icon" />',
+    'dk_current_curencey_icon' => ' <p style="font-weight: 700;">kr.</p>',
+
+    'en_site/currencey' => 'Site / Currency',
+    'dk_site/currencey' => 'Side / Valuta',
+
+    'en_currencey' => 'Currency',
+    'dk_currencey' => 'Valuta',
+
+    'en_flag' => 'img/gb-flag.svg',
+    'dk_flag' => 'img/dk-flag.svg'
+
 ];
