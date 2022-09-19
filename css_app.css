@@ -169,6 +169,7 @@ h2 {
   padding: 0.57rem;
   border-radius: 6px;
   cursor: pointer;
+  color: white;
 }
 
 #menu_container #menu .menu_item p {

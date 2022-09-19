@@ -90,4 +90,5 @@ $dictionary = [
     'en_pakkerejser' => 'Holidays',
     'dk_pakkerejser' => 'Pakkerejser',
 
+
 ];
