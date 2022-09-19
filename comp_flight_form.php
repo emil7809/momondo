@@ -66,6 +66,6 @@
         <input type="date">
       </div>
     </div>
-    <a href=<?= 'flight_search?language=' . $language  ?>><button type="button" class="button_type_3">Search</button></a>
+    <a style="margin:0 auto" href=<?= 'flight_search?language=' . $language  ?>><button type="button" class="button_type_3">Search</button></a>
   </form>
 </div>

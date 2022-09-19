@@ -64,6 +64,30 @@ $dictionary = [
     'dk_currencey' => 'Valuta',
 
     'en_flag' => 'img/gb-flag.svg',
-    'dk_flag' => 'img/dk-flag.svg'
+    'dk_flag' => 'img/dk-flag.svg',
+
+    'en_sign_in' => 'Sign in',
+    'dk_sign_in' => 'Log in',
+
+    'en_fly' => 'Flights',
+    'dk_fly' => 'Fly',
+
+    'en_overnatninger' => 'Stays',
+    'dk_overnatninger' => 'Overnatninger',
+
+    'en_bil' => 'Car hire',
+    'dk_bil' => 'Bil',
+
+    'en_færger' => 'Ferries',
+    'dk_færger' => 'Færger',
+
+    'en_nyhed' => 'NEW',
+    'dk_nyhed' => 'NYHED',
+
+    'en_oplevelser' => 'Things to do',
+    'dk_oplevelser' => 'Oplevelser',
+
+    'en_pakkerejser' => 'Holidays',
+    'dk_pakkerejser' => 'Pakkerejser',
 
 ];
