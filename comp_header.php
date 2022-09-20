@@ -185,7 +185,7 @@ session_start();
             echo '<a class="login-letteres" onclick="toggle_module()">Sign in</a>';
           }
           if ($_SESSION) {
-            echo '<a class="login-letteres" href="/bridge_signout.php">Emily</a>';
+            echo '<a class="login-letteres" href="/bridge_signout.php">' . $_SESSION['user_name'] . '</a>';
           }
           ?>
 

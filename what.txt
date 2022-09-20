@@ -4,3 +4,13 @@ how do I make shure the user styas on the page when they switch laungadge?
 
 comp_dictionary.php line 3. what is happening here?
 
+//TODO
+signin  - validation
+        - add allready existing useres, and add validation 
+header  - add image when logged in 
+        - make mobile buttons work
+admin   - make one and make the fligts deletable somthing somthing image uplad 
+flight  - connect to new database, add search and mkae the chosen flight apear in input
+
+5 pages - add content
+
