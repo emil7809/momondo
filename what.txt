@@ -1,8 +1,6 @@
 i need help validating right 
-how do a make the tiel change laungedge?
+
 how do I make shure the user styas on the page when they switch laungadge?
 
 comp_dictionary.php line 3. what is happening here?
 
-todo:
-add active class on menu item that the page is on

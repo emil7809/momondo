@@ -1,5 +1,5 @@
 <?php
-$_title = 'explore';
+$_title = 'Explore';
 require_once __DIR__ . '/comp_header.php';
 ?>
 
