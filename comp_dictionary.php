@@ -90,5 +90,11 @@ $dictionary = [
     'en_pakkerejser' => 'Holidays',
     'dk_pakkerejser' => 'Pakkerejser',
 
+    'en_explore' => 'Explore English',
+    'dk_explore' => 'Explore Dansk',
+
+    'en_rejserestriktioner' => 'Rejserestriktioner English',
+    'dk_rejserestriktioner' => 'Rejserestriktioner Dansk',
+
 
 ];
