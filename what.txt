@@ -2,6 +2,7 @@
 HELP
 how do I make shure the user styas on the page when they switch laungadge?
 comp_dictionary.php line 3. what is happening here?
+user test validation 
 
 //TODO
 
