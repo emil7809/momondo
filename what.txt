@@ -13,9 +13,10 @@ header  - add image when logged in
 
 admin   - make one and make the fligts deletable somthing somthing image uplad 
 
-5 pages - add content
 
 flight  - connect to new database, add search and mkae the chosen flight apear in input
+
+5 pages - add content
 
 Nice to have
 

@@ -297,7 +297,9 @@ nav svg {
   margin: 0;
   padding: 0;
 }
-
+nav #login-button-smol {
+  cursor: pointer;
+}
 nav #login-button {
   border: 1px solid white;
   border-radius: 4px;

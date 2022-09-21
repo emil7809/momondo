@@ -162,7 +162,7 @@ session_start();
           <?= $_burger_x  ?>
         </button>
 
-        <a class="toggle_mobile" href="/">
+        <a class="toggle_mobile" href="/?language=">
           <?= $_mini_logo  ?>
         </a>
         <a href=<?= '/?language=' . $language ?>><img id="logo" class="toggle_700" src="img/momondo.png" alt="momondo.png" /></a>
@@ -193,7 +193,7 @@ session_start();
 
         </div>
 
-        <a onclick="toggle_module()" class="toggle_mobile">
+        <a id="login-button-smol" onclick="toggle_module()" class="toggle_mobile">
           <?= $_man ?>
         </a>
 
