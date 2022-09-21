@@ -797,6 +797,10 @@ footer .bot {
     display: grid !important;
   }
 
+  #signup_module {
+    margin-left: -7.5rem;
+  }
+
   #menu_container #menu {
     width: 250px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);

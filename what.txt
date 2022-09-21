@@ -10,7 +10,6 @@ user test validation
 header  - add image when logged in 
         - make mobile buttons work
         - make logout button
-        - style signup 
 
 admin   - make one and make the fligts deletable somthing somthing image uplad 
 
