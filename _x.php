@@ -7,11 +7,11 @@ define('_ITEM_TITLE_MAX', 20);
 define('_ITEM_PRICE_REGEX', '/^[1-9][0-9*]\.[0-9]{2}$/');
 
 
-define('_USER_NAME_MIN_LEN', 2);
-define('_USER_NAME_MAX_LEN', 10);
+define('NAME_MIN_LEN', 2);
+define('NAME_MAX_LEN', 10);
 
-define('_USER_LAST_NAME_MIN_LEN', 2);
-define('_USER_LAST_NAME_MAX_LEN', 20);
+define('LAST_NAME_MIN_LEN', 2);
+define('LAST_NAME_MAX_LEN', 20);
 
 /* define('error_message', $error_message); */
 
@@ -56,34 +56,34 @@ function _validate_item_price()
 }
 
 // ##############################
-function _validate_user_name()
+function _validate_name()
 {
-    $error_message = 'user_name min ' . _USER_NAME_MIN_LEN . ' max ' . _USER_NAME_MAX_LEN . ' characters';
+    $error_message = 'user_name min ' . NAME_MIN_LEN . ' max ' . NAME_MAX_LEN . ' characters';
     if (!isset($_POST['user_name'])) {
         _respond($error_message, 400);
     }
     $_POST['user_name'] = trim($_POST['user_name']);
-    if (strlen($_POST['user_name']) < _USER_NAME_MIN_LEN) {
+    if (strlen($_POST['user_name']) < NAME_MIN_LEN) {
         _respond($error_message, 400);
     }
-    if (strlen($_POST['user_name']) > _USER_NAME_MAX_LEN) {
+    if (strlen($_POST['user_name']) > NAME_MAX_LEN) {
         _respond($error_message, 400);
     }
     return $_POST['user_name'];
 }
 
 // ##############################
-function _validate_user_last_name()
+function _validate_last_name()
 {
-    $error_message = 'user_last_name min ' . _USER_LAST_NAME_MIN_LEN . ' max ' . _USER_LAST_NAME_MAX_LEN . ' characters';
+    $error_message = 'user_last_name min ' . LAST_NAME_MIN_LEN . ' max ' . LAST_NAME_MAX_LEN . ' characters';
     if (!isset($_POST['user_last_name'])) {
         _respond($error_message, 400);
     }
     $_POST['user_last_name'] = trim($_POST['user_last_name']);
-    if (strlen($_POST['user_last_name']) < _USER_LAST_NAME_MIN_LEN) {
+    if (strlen($_POST['user_last_name']) < LAST_NAME_MIN_LEN) {
         _respond($error_message, 400);
     }
-    if (strlen($_POST['user_last_name']) > _USER_LAST_NAME_MAX_LEN) {
+    if (strlen($_POST['user_last_name']) > LAST_NAME_MAX_LEN) {
         _respond($error_message, 400);
     }
     return $_POST['user_last_name'];
@@ -91,7 +91,7 @@ function _validate_user_last_name()
 
 // ##############################
 
-function _validate_user_email()
+function _validate_email()
 {
     $error_message = 'user_email missing or invalid';
     if (!isset($_POST['user_email'])) {

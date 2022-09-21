@@ -75,24 +75,54 @@
 
 <script src="app.js"></script>
 <script>
-    function clean_input() {
-        document.querySelector(".error").style.display = "none";
-        document
-            .querySelector(".input-caontainer2")
-            .classList.remove("validate_error");
+    function clean_email_input() {
+        document.querySelector(".email_error").style.display = "none";
+        document.querySelector("[name='user_email']").classList.remove("validate_error")
+    }
+
+    function clean_password_input() {
+        document.querySelector(".password_error").style.display = "none";
+        document.querySelector("[name='user_password']").classList.remove("validate_error")
+    }
+
+
+    async function validateEmail() {
+        const frm = document.querySelector("#signin_form");
+        const conn = await fetch("api-validate-email.php", {
+            method: "POST",
+            body: new FormData(frm),
+        });
+        if (!conn.ok) {
+            document.querySelector(".email_error").style.display = "flex";
+            document.querySelector("[name='user_email']").classList.add("validate_error")
+            return;
+        }
+
+    }
+
+    async function validatePassword() {
+        const frm = document.querySelector("#signin_form");
+        const conn = await fetch("api-validate-password.php", {
+            method: "POST",
+            body: new FormData(frm),
+        });
+        if (!conn.ok) {
+            document.querySelector(".password_error").style.display = "flex";
+            document.querySelector("[name='user_password']").classList.add("validate_error")
+            return;
+        }
+
     }
 
     async function validateSingin() {
-        console.log("validateSingin")
         const frm = document.querySelector("#signin_form");
         const conn = await fetch("api-validate-user.php", {
             method: "POST",
             body: new FormData(frm),
         });
         if (!conn.ok) {
-            document.querySelector(".error").style.display = "flex";
-            /* document.querySelector("[name='user_email']").classList.add("validate_error") */
-            console.log("Error");
+            validatePassword();
+            validateEmail();
             return;
         }
 
@@ -101,31 +131,29 @@
     }
 
     async function validateSignup() {
-        const frm = document.querySelector("#signup_module");
+        const form = document.querySelector("#signup_form");
         const conn = await fetch("api-validate.php", {
             method: "POST",
-            body: new FormData(frm),
+            body: new FormData(form),
         });
         if (!conn.ok) {
-            /*  document.querySelector(".error").style.display = "flex"
-               document.querySelector(".input-caontainer2").classList.add("validate_error") */
-            console.log("Error");
             return;
         }
 
-        //const data = await conn.json(); // Convert text to JSON
+        const data = await conn.json(); // Convert text to JSON
         // Success
         console.log("Success");
+        closeSignup()
         Swal.fire({
             icon: "success",
             title: "Welcome " + data.user_name + "!",
             html: "You account has been created!",
             confirmButtonText: "Sign in",
         }).then(() => {
-            window.location.replace("signin");
+            toggle_module()
         });
 
-        /* window.location.replace('/'); */
+
     }
 </script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

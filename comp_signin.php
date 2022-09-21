@@ -12,18 +12,23 @@
             <h2>Sign in or create an account</h2>
             <p>Track prices, organize travel plans and access member-only deals with your momondo account.</p>
         </div>
-        <form id="signin_form" method="POST" onsubmit="validateSingin(); return false">
-            <!--  <p class="error" style="display: none">#error#</p> -->
-            <div class="error" style="display: none">
+        <form id="signin_form" method="POST" onsubmit="validateSingin(); return false" onblur="cleanError()">
+
+
+            <div class="email_error" style="display: none">
                 <?= $_error_x ?>
-                <p class="error_style">Wrong Email or Pasword</p>
+                <p class="error_style">Wrong Email</p>
+            </div>
+            <div class="password_error" style="display: none">
+                <?= $_error_x ?>
+                <p class="error_style">Wrong Pasword</p>
             </div>
             <div class="input-caontainer2">
-                <input name="user_email" type="text" placeholder="Email address" onfocus="clean_input()" onblur="validateSingin()">
+                <input name="user_email" type="text" placeholder="Email address" onfocus="clean_email_input()" onblur="validateEmail()">
             </div>
 
             <div class="input-caontainer2">
-                <input name="user_password" type="password" placeholder="Password" onfocus="clean_input()" onblur="validateSingin()">
+                <input name="user_password" type="password" placeholder="Password" onfocus="clean_password_input()" onblur="validatePassword()">
             </div>
             <button class=" button_type_1">Sign in</button>
         </form>
@@ -53,16 +58,16 @@
             <h2>Sign up</h2>
 
         </div>
-        <form method="POST" onsubmit="validate(validateSignup); return false">
+        <form method="POST" id="signup_form" onsubmit="validate(validateSignup); return false">
 
             <div class="error" style="display: none">
                 <?= $_error_x ?>
                 <p class="error_style">
-                    Your name must be between <?= _USER_NAME_MIN_LEN ?> and <?= _USER_NAME_MAX_LEN ?> characters
+                    Your name must be between <?= NAME_MIN_LEN ?> and <?= NAME_MAX_LEN ?> characters
                 </p>
             </div>
             <div class="input-caontainer2">
-                <input name="new_user_name" type="text" placeholder="Name" maxlength="<?= _USER_NAME_MAX_LEN ?>" data-validate="str" data-min="<?= _USER_NAME_MIN_LEN ?>" data-max="<?= _USER_NAME_MAX_LEN ?>">
+                <input name="user_name" type="text" placeholder="Name" maxlength="<?= NAME_MAX_LEN ?>" data-validate="str" data-min="<?= NAME_MIN_LEN ?>" data-max="<?= NAME_MAX_LEN ?>">
             </div>
 
             <div class="error" style="display: none">
@@ -72,14 +77,14 @@
                 </p>
             </div>
             <div class="input-caontainer2">
-                <input name="new_user_email" type="text" placeholder="Email address" data-validate="email">
+                <input name="user_email" type="text" placeholder="Email address" data-validate="email">
             </div>
 
             <div class="input-caontainer2">
-                <input name="new_user_password" type="password" placeholder="Password" data-validate="str" data-min="<?= _USER_NAME_MIN_LEN ?>" data-max="<?= _USER_NAME_MAX_LEN ?>">
+                <input name="password" type="password" placeholder="Password" data-validate="str" data-min="<?= NAME_MIN_LEN ?>" data-max="<?= NAME_MAX_LEN ?>">
             </div>
             <div class="input-caontainer2">
-                <input name="repeat_password" type="password" placeholder="Repeat password" data-validate="match" data-match-name="password">
+                <input name="password" type="password" placeholder="Repeat password" data-validate="match" data-match-name="password">
             </div>
             <button class="button_type_1 sign_up_button">Sign up</button>
         </form>
