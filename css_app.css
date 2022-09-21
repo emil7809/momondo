@@ -117,6 +117,16 @@ input {
   color: red;
 }
 
+.new_email_error,
+.email_in_use_error,
+.new_password_error {
+  padding-top: 1rem;
+}
+
+.validate_green {
+  box-shadow: 0px 5px 10px rgba(76, 204, 64, 0.75) !important;
+  border-bottom: 2px solid #2da424 !important;
+}
 .validate_error {
   box-shadow: 0px 5px 10px rgba(204, 64, 64, 0.75) !important;
   border-bottom: 2px solid #a42424 !important;

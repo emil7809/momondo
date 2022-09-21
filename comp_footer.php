@@ -75,59 +75,97 @@
 
 <script src="app.js"></script>
 <script>
-    function clean_email_input() {
-        document.querySelector(".email_error").style.display = "none";
-        document.querySelector("[name='user_email']").classList.remove("validate_error")
+    function clean_name_input() {
+        document.querySelector(".name_error").style.display = "none";
+        document.querySelector("[name='user_name']").classList.remove("validate_error")
+        document.querySelector("[name='user_name']").classList.remove("validate_green")
     }
 
-    function clean_password_input() {
-        document.querySelector(".password_error").style.display = "none";
-        document.querySelector("[name='user_password']").classList.remove("validate_error")
+    function clean_New_Email_input() {
+        document.querySelector(".new_email_error").style.display = "none";
+        document.querySelector(".email_in_use_error").style.display = "none";
+        document.querySelector("[name='new_user_email']").classList.remove("validate_error")
+        document.querySelector("[name='new_user_email']").classList.remove("validate_green")
+
     }
 
+    function clean_New_Password_input() {
+        document.querySelector(".new_password_error").style.display = "none";
+        document.querySelector("[name='new_password']").classList.remove("validate_error")
+        document.querySelector("[name='new_password']").classList.remove("validate_green")
 
-    async function validateEmail() {
-        const frm = document.querySelector("#signin_form");
-        const conn = await fetch("api-validate-email.php", {
+    }
+
+    async function validateName() {
+        const frm = document.querySelector("#signup_form");
+        const conn = await fetch("api-validate-name.php", {
             method: "POST",
             body: new FormData(frm),
         });
         if (!conn.ok) {
-            document.querySelector(".email_error").style.display = "flex";
-            document.querySelector("[name='user_email']").classList.add("validate_error")
+            document.querySelector(".name_error").style.display = "flex";
+            document.querySelector("[name='user_name']").classList.add("validate_error")
+            document.querySelector("[name='user_name']").classList.remove("validate_green")
             return;
         }
+        document.querySelector(".name_error").style.display = "none";
+        document.querySelector("[name='user_name']").classList.remove("validate_error")
+        document.querySelector("[name='user_name']").classList.add("validate_green")
 
     }
-
-    async function validatePassword() {
-        const frm = document.querySelector("#signin_form");
-        const conn = await fetch("api-validate-password.php", {
+    async function checkEmail() {
+        const frm = document.querySelector("#signup_form");
+        const conn = await fetch("api-check-email.php", {
             method: "POST",
             body: new FormData(frm),
         });
         if (!conn.ok) {
-            document.querySelector(".password_error").style.display = "flex";
-            document.querySelector("[name='user_password']").classList.add("validate_error")
+            console.log("ooops")
+            document.querySelector(".email_in_use_error").style.display = "flex";
+            document.querySelector("[name='new_user_email']").classList.remove("validate_green")
+            document.querySelector("[name='new_user_email']").classList.add("validate_error")
             return;
         }
+        document.querySelector(".email_in_use_error").style.display = "none";
+        document.querySelector("[name='new_user_email']").classList.remove("validate_error")
+        document.querySelector("[name='new_user_email']").classList.remove("validate_green")
 
     }
 
-    async function validateSingin() {
-        const frm = document.querySelector("#signin_form");
-        const conn = await fetch("api-validate-user.php", {
+    async function validateNewEmail() {
+        const frm = document.querySelector("#signup_form");
+        const conn = await fetch("api-validate-new_email.php", {
             method: "POST",
             body: new FormData(frm),
         });
         if (!conn.ok) {
-            validatePassword();
-            validateEmail();
+            document.querySelector(".new_email_error").style.display = "flex";
+            document.querySelector("[name='new_user_email']").classList.add("validate_error")
+            document.querySelector("[name='new_user_email']").classList.remove("validate_green")
             return;
         }
+        document.querySelector(".new_email_error").style.display = "none";
+        /*  document.querySelector("[name='new_user_email']").classList.remove("validate_error") */
+        document.querySelector("[name='new_user_email']").classList.add("validate_green")
 
-        console.log("Succsess");
-        window.location.replace("bridge_signin.php");
+    }
+
+    async function validateNewPassword() {
+        const frm = document.querySelector("#signup_form");
+        const conn = await fetch("api-validate-new-password.php", {
+            method: "POST",
+            body: new FormData(frm),
+        });
+        if (!conn.ok) {
+            document.querySelector(".new_password_error").style.display = "flex";
+            document.querySelector("[name='new_password']").classList.add("validate_error")
+            document.querySelector("[name='new_password']").classList.remove("validate_green")
+            return;
+        }
+        document.querySelector(".new_password_error").style.display = "none";
+        document.querySelector("[name='new_password']").classList.remove("validate_error")
+        document.querySelector("[name='new_password']").classList.add("validate_green")
+
     }
 
     async function validateSignup() {
@@ -137,6 +175,10 @@
             body: new FormData(form),
         });
         if (!conn.ok) {
+            validateName()
+            checkEmail()
+            validateNewEmail()
+            validateNewPassword()
             return;
         }
 
