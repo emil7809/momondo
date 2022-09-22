@@ -1,26 +1,34 @@
 
 HELP
+signup  - remove 400 eroor from console? is backend confirmed?
+
 how do I make shure the user styas on the page when they switch laungadge?
 comp_dictionary.php line 3. what is happening here?
 user test validation 
 
 //TODO
 signup  - remove 400 eroor from console? is backend confirmed?
+      
 
-header  - add image when logged in 
-        - make mobile buttons work
-        - make logout button
+admin   - make one
+        - make the fligts deletable
+        - image uplad 
 
-admin   - make one and make the fligts deletable somthing somthing image uplad 
-
-
-flight  - connect to new database, add search and mkae the chosen flight apear in input
+flight  - connect to new database, add search 
 
 5 pages - add content
+
+
 
 Nice to have
 
 signup  - Confirm password
         - translate to danish
+
+header  - make mobile buttons work
+        - translate to danish
+
+flight  - makae the chosen flight apear in input
         
 
+menu    - side menu push page when oppened

@@ -727,6 +727,44 @@ div.city-contaier:hover {
   margin-top: 1rem;
 }
 
+main#admin #admin_top {
+  background: #220340;
+  display: grid;
+  justify-content: center;
+  padding-top: 1rem;
+}
+main#admin #admin_top h1 {
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+main#admin #admin_top #profile_picture_container {
+  display: flex;
+}
+main#admin #admin_top #profile_picture_container svg {
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  padding: 6px;
+  border-radius: 100%;
+  align-self: flex-end;
+  margin-left: -2rem;
+}
+
+main#admin #admin_top #profile_picture_sprite {
+  background-image: url("img/profile-img.jpg");
+  background-size: cover;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+}
+main#admin #admin_bot {
+  background: white;
+  min-height: 50vh;
+}
+main#admin #admin_bot h2 {
+  font-size: 1.5rem;
+}
+
 footer {
   width: 100vw;
   background: rgba(19, 0, 38, 1);
