@@ -31,3 +31,4 @@ flight  - makae the chosen flight apear in input
 menu    - side menu push page when oppened
 
 admin   - make prettiere image upload module
+        - make drop down display none on blur
