@@ -791,7 +791,7 @@ main#admin .module_container .admin_module_mid {
   padding: 2rem 0;
 }
 
-main#admin .module_container .admin_module_mid button {
+main#admin .module_container .admin_module_mid .upload_button {
   all: unset;
   background-color: #6b15c1;
   border-radius: 4px;
@@ -799,7 +799,9 @@ main#admin .module_container .admin_module_mid button {
   color: #fff;
   font-family: sans-serif;
   font-weight: 600;
-  margin: 1rem 0;
+  margin: 1rem auto;
+  text-align: center;
+  width: 15rem;
 }
 
 main#admin .module_container .admin_module_mid p {

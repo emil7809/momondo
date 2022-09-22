@@ -7,14 +7,11 @@ comp_dictionary.php line 3. what is happening here?
 user test validation 
 
 //TODO
-signup  - remove 400 eroor from console? is backend confirmed?
-      
-
-admin   - make one
-        - make the fligts deletable
-        - image uplad 
+signup  - remove 400 eroor from console? is backend confirmed?      
 
 flight  - connect to new database, add search 
+
+admin   - make the fligts deletable
 
 5 pages - add content
 
@@ -32,3 +29,5 @@ flight  - makae the chosen flight apear in input
         
 
 menu    - side menu push page when oppened
+
+admin   - make prettiere image upload module

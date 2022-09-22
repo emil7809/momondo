@@ -11,11 +11,12 @@ require_once __DIR__ . '/comp_header.php';
                 <h3>Rediger dit profilbillede</h3>
                 <a onclick="toggle_admin_module()" class="x">X</a>
             </div>
-            <div class="admin_module_mid">
-                <button>Upload fra Computer</button>
+            <form class="admin_module_mid" action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input class="upload_button" type="submit" value="Upload fra Computer" name="submit">
                 <p>Maks. 6 MB</p>
                 <p>Kun JPEG, PNG og GIF</p>
-            </div>
+            </form>
             <div class="admin_module_bot">
                 <p>Anvend et billede fra sociale medier</p>
                 <img src="img/profile-img.jpg" alt="you">
