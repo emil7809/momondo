@@ -13,6 +13,7 @@ function toggle_menu() {
   }
 }
 function toggle_module() {
+ 
   const sing_module = document.querySelector(".the_big_black");
   const signInModule = document.querySelector("#signin_module");
   if (sing_module.classList.contains("show")) {
@@ -20,6 +21,17 @@ function toggle_module() {
   } else {
     signInModule.classList.remove("hide");
     sing_module.classList.add("show");
+  }
+}
+
+function toggle_admin_module() {
+  const modulee = document.querySelector(".the_other_big_black");
+ 
+  if (modulee.classList.contains("show")) {
+    modulee.classList.remove("show");
+  } else {
+    
+    modulee.classList.add("show");
   }
 }
 
