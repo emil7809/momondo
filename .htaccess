@@ -14,6 +14,7 @@ RewriteRule ^things_to_do$      view_things_to_do.php [NC,L]
 RewriteRule ^holidays$          view_holidays.php [NC,L] 
 RewriteRule ^explore$           view_explore.php [NC,L] 
 RewriteRule ^rejserestriktioner$   view_rejserestriktioner.php [NC,L] 
+RewriteRule ^admin$             view_admin.php [NC,L] 
 
 
 RewriteRule ^app.css$           css_app.css [NC,L]          

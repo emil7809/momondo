@@ -5,7 +5,7 @@ comp_dictionary.php line 3. what is happening here?
 user test validation 
 
 //TODO
-
+signup  - remove 400 eroor from console? is backend confirmed?
 
 header  - add image when logged in 
         - make mobile buttons work
@@ -20,6 +20,7 @@ flight  - connect to new database, add search and mkae the chosen flight apear i
 
 Nice to have
 
-signup  - remove 400 eroor from console? 
-        - Confirm password
+signup  - Confirm password
+        - translate to danish
+        
 

@@ -156,7 +156,7 @@ h2 {
   left: -200vw;
   width: 200vw;
   height: 100vh;
-  z-index: 9999;
+  z-index: 100;
   transition: 0.2s linear;
 }
 
@@ -260,6 +260,50 @@ nav #logo_container button:hover path {
   color: rgba(33, 3, 58, 1);
 }
 
+nav #admin_dropdown {
+  background: white;
+  position: absolute;
+  top: 4rem;
+  z-index: 50;
+  right: 3rem;
+  width: 250px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgb(21 1 39 / 16%), 0 -1px 4px rgb(21 1 39 / 4%);
+
+  display: none;
+}
+nav #admin_dropdown a {
+  color: #150127;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+nav .button_type_3 {
+  all: unset;
+  font-family: sans-serif;
+  padding: 0.2rem 0.5rem !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  font-size: 0.9rem !important;
+  color: #150127 !important;
+  background-color: white !important;
+  border: 1px solid #000000 !important;
+  width: 90%;
+  text-align: center;
+  /* margin: 1rem 0; */
+}
+
+#admin_dropdown.show {
+  display: grid;
+}
+
+nav .button_type_3:hover,
+nav #admin_dropdown a:nth-child(-n + 3):hover {
+  background-color: #f3f0f5 !important;
+}
+
 .toggle_700 {
   display: none;
 }
@@ -272,12 +316,14 @@ nav #logo_container button:hover path {
 }
 
 nav a,
+nav p,
 footer a {
   color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.85rem;
   padding: 15px 15px;
+  font-family: "cerapro-bold", sans-serif;
 }
 
 nav #flag-icon {
@@ -315,13 +361,22 @@ nav #login-button:hover {
 }
 
 nav #login-button:hover svg,
-#login-button:hover a {
+#login-button:hover a,
+#login-button:hover p,
+#login-button:hover {
   fill: rgba(33, 3, 58, 1);
   color: rgba(33, 3, 58, 1);
 }
 
 nav #login-button a {
   padding-left: 11px;
+}
+
+nav #login-button .profile_pic {
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 3rem;
+  object-fit: cover;
 }
 
 nav #dansk {
@@ -332,7 +387,13 @@ nav #logo {
   width: 140px;
   cursor: pointer;
 }
-
+main#page {
+  display: grid;
+  justify-content: center;
+}
+main#page button {
+  margin-top: 3rem;
+}
 main#index {
   padding: 0 3rem;
 }
@@ -447,7 +508,7 @@ div#trip_details p {
   margin-top: 8px;
   position: absolute;
   padding: 1rem;
-  z-index: 999999;
+  z-index: 100;
 }
 
 #flight_form button {
@@ -541,7 +602,7 @@ div.city-contaier:hover {
   margin-top: 8px;
   position: absolute;
   padding: 1rem;
-  z-index: 999999;
+  z-index: 100;
 }
 
 #flight_form div#time_container {
@@ -557,14 +618,14 @@ div.city-contaier:hover {
   width: 100%;
   height: 100%;
   background: rgba(33, 3, 58, 0.5);
-  z-index: 99999999;
+  z-index: 110;
 }
 
 .the_big_black2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 99999999;
+  z-index: 110;
 }
 
 .no_click {
@@ -809,6 +870,9 @@ footer .bot {
   }
 }
 @media screen and (min-width: 750px) {
+  nav #admin_dropdown {
+    right: 6.5rem;
+  }
   main#index h1 {
     text-align: left !important;
     padding-left: 0 !important;
