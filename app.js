@@ -108,9 +108,9 @@ function hide_to_results() {
 
 async function get_cities_from() {
   document.querySelector("#from-results").innerHTML = "";
-  const search_value = document.querySelector("#from-input").value 
+ /*  const search_value = document.querySelector("#from-input").value  */
  /*  const conn = await fetch("api-get-cities-from.php"); */
- const conn = await fetch('api-search-city.php?from_city='+search_value)
+ const conn = await fetch("api-get-cities-from.php");
   const data = await conn.json();
   console.log(data)
   let all_cities = "";
@@ -130,14 +130,14 @@ async function get_cities_from() {
                   </div>`;
 
   data.forEach(city => {
-    let cityName = city.city_name;
+    let cityName = city.cityName;
     console.log(cityName);
     let copy_div_city = div_city;
-   /*  copy_div_city = copy_div_city.replace("#img#", city.cityImage); */
+    copy_div_city = copy_div_city.replace("#img#", city.cityImage);
     copy_div_city = copy_div_city.replace("#name#", cityName);
-   /*  copy_div_city = copy_div_city.replace("#country#", city.cityCountry);
+    copy_div_city = copy_div_city.replace("#country#", city.cityCountry);
     copy_div_city = copy_div_city.replace("#initial#", city.cityInitial);
-    copy_div_city = copy_div_city.replace("#airport#", city.cityAirport); */
+    copy_div_city = copy_div_city.replace("#airport#", city.cityAirport);
     all_cities += copy_div_city;
   }) 
   
@@ -151,10 +151,10 @@ async function get_cities_from() {
 
 async function get_cities_to() {
   document.querySelector("#to-results").innerHTML = "";
-  let conn = await fetch("api-get-cities-to.php");
-  let data = await conn.json();
+  const conn = await fetch("api-get-cities-to.php");
+  const data = await conn.json();
   let all_cities = "";
-  let div_city = `<div class="city-contaier">
+  const div_city = `<div class="city-contaier">
                     <img src="#img#">
                     <div>
                       <div class="flex"> 
@@ -258,4 +258,23 @@ async function validateSingin() {
 
   console.log("Succsess");
   window.location.replace("bridge_signin.php");
+}
+
+async function delete_flight() {
+   
+    const frm = event.target.form
+    const conn = await fetch('api-delete-flight.php', {
+      method: "POST",
+      body: new FormData(frm)
+    })
+    const data = await conn.json()
+    if (!conn.ok) {
+      // Sweet alert: ups... fligth not found
+      console.log(data)
+      return
+    }
+    // Success
+    console.log(data)
+    // console.log(e.path[1].children[0].value)
+    frm.remove()
 }

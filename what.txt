@@ -2,6 +2,8 @@
 HELP
 signup  - remove 400 eroor from console? is backend confirmed?
 
+help Nice to have 
+
 how do I make shure the user styas on the page when they switch laungadge?
 comp_dictionary.php line 3. what is happening here?
 user test validation 
@@ -12,12 +14,8 @@ user test validation
 signup  - remove 400 eroor from console? is backend confirmed?  
         - better backend validation 
 
-admin   - make the fligts deletable
 
 5 pages - add content
-
-fligts   - save from
-
 
 
 
@@ -37,6 +35,7 @@ menu    - side menu push page when oppened
 
 admin   - make prettiere image upload module
         - make drop down display none on blur
+        - sweet alert, shure you want to delete?
 
 flight  - connect to new database, add search 
 

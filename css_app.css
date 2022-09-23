@@ -420,7 +420,42 @@ main#index #flight_form div#switch {
   border: 5px solid #0095cc;
 }
 
-main#index .card {
+main#index #why_momondo {
+  margin-top: 5rem;
+}
+main#index #why_momondo h2,
+h4,
+p {
+  color: white;
+}
+main#index #why_momondo h2 {
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+}
+
+main#index #why_momondo h4 {
+  font-size: 0.9rem;
+  padding-bottom: 0.3rem;
+}
+
+main#index #why_momondo p {
+  font-size: 0.8rem;
+}
+
+main#index #why_momondo .why_elm {
+  padding: 0.5rem;
+  border-top: 1px #572981 solid;
+}
+
+main#index #why_momondo:last-child {
+  border-bottom: 1px #572981 solid;
+}
+
+main#index #why_momondo svg {
+  margin: 1rem 1rem 1rem 0;
+}
+
+/* main#index .card {
   margin-top: 3rem;
   border: 1px solid #572981;
   border-radius: 6px;
@@ -448,7 +483,7 @@ main#index .card p,
 main#index .card button {
   margin: 1rem;
   color: white !important;
-}
+} */
 
 div#flights-search {
   background-color: #150127;
@@ -1115,6 +1150,35 @@ footer .bot {
     border-bottom-left-radius: 6px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0;
+  }
+
+  main#index #why_momondo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  main#index #why_momondo h2 {
+    position: absolute;
+    margin-top: -2rem;
+    align-self: flex-start;
+  }
+
+  main#index #why_momondo .why_elm {
+    display: grid;
+    align-items: center;
+    width: 400px;
+    height: 150px;
+    border: 1px #572981 solid;
+    border-radius: 6px;
+    padding: 1.2rem 0.5rem;
+  }
+
+  main#index #why_momondo:last-child {
+    border-bottom: unset;
+  }
+
+  main#index #why_momondo .why_elm svg {
+    margin: 0;
   }
 
   #flight_form #from_to_container {
