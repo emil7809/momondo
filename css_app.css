@@ -859,6 +859,30 @@ main#admin #admin_bot h2 {
   font-size: 1.5rem;
 }
 
+main#admin #admin_bot {
+  padding: 2rem;
+}
+
+main#admin #admin_bot p {
+  color: #000000;
+  font-weight: 700;
+}
+
+main#admin #admin_bot .previous_searches_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px rgb(215, 215, 215) solid;
+  padding: 1.3rem 1.8rem;
+  margin: 1rem 0;
+}
+
+main#admin #admin_bot .previous_searches_container .button_type_1 {
+  background: white;
+  color: #de1666 !important;
+  width: 5rem;
+}
+
 footer {
   width: 100vw;
   background: rgba(19, 0, 38, 1);
@@ -1115,10 +1139,16 @@ footer .bot {
     margin-top: 0;
   }
 
-  main#admin #admin_top_container {
+  main#admin #admin_top_container,
+  main#admin #admin_bot {
     display: grid;
     grid-template-columns: 1fr 800px 1fr;
     padding: 3rem 0;
+  }
+
+  main#admin #admin_bot #previous_searches_form,
+  main#admin #admin_bot h2 {
+    grid-column: 2;
   }
   main#admin #admin_top {
     grid-column: 2;

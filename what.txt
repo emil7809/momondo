@@ -16,6 +16,8 @@ admin   - make the fligts deletable
 
 5 pages - add content
 
+fligts   - save from
+
 
 
 
@@ -37,3 +39,5 @@ admin   - make prettiere image upload module
         - make drop down display none on blur
 
 flight  - connect to new database, add search 
+
+all     - translate

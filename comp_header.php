@@ -3,6 +3,18 @@ require_once __DIR__ . '/_x.php';
 require_once __DIR__ . '/svgs.php';
 require_once __DIR__ . '/comp_dictionary.php';
 session_start();
+
+try {
+  $db = new PDO('sqlite:' . __DIR__ . '/momondo.db');
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $q = $db->prepare('SELECT * FROM flights');
+  $q->execute();
+  $flights = $q->fetchAll(PDO::FETCH_ASSOC);
+  //echo json_encode($flights);
+} catch (Exception $ex) {
+  echo "Error";
+  exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
