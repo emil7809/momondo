@@ -108,10 +108,13 @@ function hide_to_results() {
 
 async function get_cities_from() {
   document.querySelector("#from-results").innerHTML = "";
-  let conn = await fetch("api-get-cities-from.php");
-  let data = await conn.json();
+  const search_value = document.querySelector("#from-input").value 
+ /*  const conn = await fetch("api-get-cities-from.php"); */
+ const conn = await fetch('api-search-city.php?from_city='+search_value)
+  const data = await conn.json();
+  console.log(data)
   let all_cities = "";
-  let div_city = `<div class="city-contaier">
+  const div_city = `<div class="city-contaier">
                     <img src="#img#"> 
                     <div>
                       <div class="flex"> 
@@ -126,18 +129,18 @@ async function get_cities_from() {
                     
                   </div>`;
 
-  for (let i = 0; i < data.length; i++) {
-    let city = data[i];
-    let cityName = city.cityName;
+  data.forEach(city => {
+    let cityName = city.city_name;
     console.log(cityName);
     let copy_div_city = div_city;
-    copy_div_city = copy_div_city.replace("#img#", city.cityImage);
+   /*  copy_div_city = copy_div_city.replace("#img#", city.cityImage); */
     copy_div_city = copy_div_city.replace("#name#", cityName);
-    copy_div_city = copy_div_city.replace("#country#", city.cityCountry);
+   /*  copy_div_city = copy_div_city.replace("#country#", city.cityCountry);
     copy_div_city = copy_div_city.replace("#initial#", city.cityInitial);
-    copy_div_city = copy_div_city.replace("#airport#", city.cityAirport);
+    copy_div_city = copy_div_city.replace("#airport#", city.cityAirport); */
     all_cities += copy_div_city;
-  }
+  }) 
+  
 
   document
     .querySelector("#from-results")

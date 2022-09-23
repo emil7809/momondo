@@ -9,11 +9,8 @@ user test validation
 
 
 //TODO
-signup  - remove 400 eroor from console? is backend confirmed?     
-
-
-
-flight  - connect to new database, add search 
+signup  - remove 400 eroor from console? is backend confirmed?  
+        - better backend validation 
 
 admin   - make the fligts deletable
 
@@ -38,3 +35,5 @@ menu    - side menu push page when oppened
 
 admin   - make prettiere image upload module
         - make drop down display none on blur
+
+flight  - connect to new database, add search 

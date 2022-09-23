@@ -1042,6 +1042,11 @@ footer .bot {
     background-color: rgba(255, 255, 255, 0.7);
   }
 
+  main#admin #admin_top #profile_info_container {
+    display: flex;
+    gap: 2rem;
+  }
+
   footer .top {
     max-width: 600px;
   }
@@ -1108,6 +1113,33 @@ footer .bot {
   #flight_form button {
     margin-left: 0.5rem;
     margin-top: 0;
+  }
+
+  main#admin #admin_top_container {
+    display: grid;
+    grid-template-columns: 1fr 800px 1fr;
+    padding: 3rem 0;
+  }
+  main#admin #admin_top {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+  }
+
+  main#admin #admin_top #profile_info_and_name_container {
+    grid-row-start: 1;
+  }
+
+  main#admin #admin_top #profile_info_and_name_container h1 {
+    text-align: start;
+    padding-bottom: 0.5rem;
+    font-size: 2.3rem;
+  }
+
+  main#admin #admin_top .profile_picture_sprite {
+    width: 10rem;
+    height: 10rem;
   }
 
   footer #top_mid_container {
