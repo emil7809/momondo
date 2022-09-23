@@ -22,4 +22,6 @@ if ($_POST['user_password']  != $correct_password) {
 $email = ['user_email' => $_POST['user_email']];
 _respond($email);
 
+/* echo json_encode(['user_email' => $_POST['user_email']]); */
+
 /* echo json_encode(['info' => 'Welcome to the system', 'message' => $_POST['user_email']]); */
