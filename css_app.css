@@ -63,7 +63,8 @@ input {
 
 .button_type_1,
 .button_type_2,
-.button_type_3 {
+.button_type_3,
+.button_type_4 {
   all: unset;
   background: linear-gradient(
     80deg,
@@ -110,6 +111,13 @@ input {
   border-radius: 100% !important;
   padding: 1rem !important;
   font-size: 0.8rem !important;
+}
+
+.button_type_4 {
+  background: white;
+  color: #000000 !important;
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 
 .error_style {
@@ -423,12 +431,12 @@ main#index #flight_form div#switch {
 main#index #why_momondo {
   margin-top: 5rem;
 }
-main#index #why_momondo h2,
+main#index h2,
 h4,
 p {
   color: white;
 }
-main#index #why_momondo h2 {
+main#index h2 {
   font-size: 1.4rem;
   padding-bottom: 1rem;
 }
@@ -484,6 +492,51 @@ main#index .card button {
   margin: 1rem;
   color: white !important;
 } */
+main#index #inspiration {
+  padding-top: 2.5rem;
+}
+main#index #inspiration h2 {
+  padding-bottom: 0.2rem;
+}
+main#index #inspiration p,
+#img_slide b {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: white;
+}
+
+main#index #inspiration .flex > * {
+  margin: 0 1rem;
+}
+
+main#index #img_slide {
+  display: grid;
+  grid-auto-flow: column;
+  /*  overflow-x: hidden; */
+  /*   transform: translateX(-350px); */
+}
+
+main#index #img_slide .img_slide_elm p {
+  font-size: 0.8rem;
+}
+main#index #img_slide .img_slide_elm {
+  margin: 0 1rem;
+}
+
+main#index #img_slide .slide_img_sprite {
+  background-size: cover;
+  height: 170px;
+  width: 350px;
+  border-radius: 6px;
+  margin: 1rem 0 0.5rem 0;
+}
+
+main#index #img_slide .slide_img_sprite.img_one {
+  background-image: url("https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2020/03/MOMONDO_THEME_FLIGHT_AIRPORT_GettyImages-1033214038_1500x1500-1500x1312.jpg");
+}
+main#index #img_slide .slide_img_sprite.img_two {
+  background-image: url("https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2020/03/THEME_FLIGHT_GettyImages-909335900_1500px-1024x1024.jpg");
+}
 
 div#flights-search {
   background-color: #150127;
