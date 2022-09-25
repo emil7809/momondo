@@ -9,6 +9,24 @@ require_once __DIR__ . '/comp_header.php'; ?>
   <div class="center_container">
     <?php require_once __DIR__ . '/comp_flight_form.php'; ?>
   </div>
+
+
+
+
+  <div class="center_container">
+    <div class="card">
+      <img src="https://www.momondo.co.uk/rimg/kimg/a/suppliers/7002899/21615c24171ef066.jpg?crop=true&height=365" alt="img" />
+      <div class="flex_grow">
+        <div>
+          <h4>Live Happy and soar off this summer</h4>
+          <p>
+            Calling all sun and deal seekers! Get first dibs on flights available until April 2024
+          </p>
+        </div>
+        <button>Book Now</button>
+      </div>
+    </div>
+  </div>
   <div class="center_container">
     <div id="why_momondo">
       <h2>Here’s why travellers choose momondo</h2>
@@ -64,6 +82,70 @@ require_once __DIR__ . '/comp_header.php'; ?>
       </div>
     </div>
   </div>
+  <div class="center_container">
+    <div id="inspiration">
+      <div class="txt_and_button">
+        <div>
+          <h2>Travel inspiration</h2>
+          <p>Our latest travel tips, expert hacks and industry insights to help make your journey one to
+            remember</p>
+        </div>
+        <button type="button" class="button_type_4">More inspiration</button>
+      </div>
+      <div id="img_slide">
+        <div class="img_slide_elm">
+          <div class="slide_img_sprite img_one"></div>
+          <div>
+            <b>Coronavirus update: What do the US travel restrictions mean for me?</b>
+            <p>May 6, 2020 - 3 min</p>
+          </div>
+        </div>
+        <div class="img_slide_elm">
+          <div class="slide_img_sprite img_two"></div>
+          <div>
+            <b>What to know about coronavirus (COVID-19) and travel</b>
+            <p>Jan 7, 2021 - 2 min</p>
+          </div>
+        </div>
+        <div class="img_slide_elm">
+          <div class="slide_img_sprite img_three"></div>
+          <div>
+            <b>Coronavirus update: What do the US travel restrictions mean for me?</b>
+            <p>May 6, 2020 - 3 min</p>
+          </div>
+        </div>
+        <div class="img_slide_elm">
+          <div class="slide_img_sprite img_four"></div>
+          <div>
+            <b>What to know about coronavirus (COVID-19) and travel</b>
+            <p>Jan 7, 2021 - 2 min</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="center_container">
+    <div class="above_flight_to_shortcut_container">
+      <h3>Trending cities</h3>
+      <p>The most searched for cities on momondo</p>
+    </div>
+    <div class="flight_to_shortcut_container">
+      <div id="trending_cities"></div>
+    </div>
+  </div>
+
+  <div class="center_container">
+    <div class="above_flight_to_shortcut_container">
+      <h3>Trending countries</h3>
+      <p>The most searched for countries on momondo</p>
+    </div>
+    <div class="flight_to_shortcut_container">
+      <div id="trending_countries"></div>
+    </div>
+  </div>
+
 </main>
 
 

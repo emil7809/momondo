@@ -278,3 +278,60 @@ async function delete_flight() {
     // console.log(e.path[1].children[0].value)
     frm.remove()
 }
+
+get_trending_cities()
+
+async function get_trending_cities() {
+  const conn = await fetch("api-trending-cities.php");
+  const data = await conn.json();
+  let all_cities = "";
+  const div_city = `<div class="flight_to_card">
+                      <div class="left">
+                        <img src="#img#" alt="img" />
+                      </div>
+                      <div class="right">
+                        <h5>FLIGHT TO</h5>
+                        <p>#name#</p>
+                      </div>
+                    </div>`;
+
+    data.forEach(city =>  {
+    let div_city_clone = div_city;
+    div_city_clone = div_city_clone.replace("#img#", city.cityImage);
+    div_city_clone = div_city_clone.replace("#name#", city.cityName);
+    all_cities += div_city_clone;
+  })
+
+  document
+    .querySelector("#trending_cities")
+    .insertAdjacentHTML("afterbegin", all_cities);
+ 
+}
+get_trending_countries()
+
+async function get_trending_countries() {
+  const conn = await fetch("api-trending-countries.php");
+  const data = await conn.json();
+  let all_countries = "";
+  const div_country = `<div class="flight_to_card">
+                      <div class="left">
+                        <img src="#img#" alt="img" />
+                      </div>
+                      <div class="right">
+                        <h5>FLIGHT TO</h5>
+                        <p>#name#</p>
+                      </div>
+                    </div>`;
+
+    data.forEach(country =>  {
+    let div_country_clone = div_country;
+    div_country_clone = div_country_clone.replace("#img#", country.countryImage);
+    div_country_clone = div_country_clone.replace("#name#", country.countryName);
+    all_countries += div_country_clone;
+  })
+
+  document
+    .querySelector("#trending_countries")
+    .insertAdjacentHTML("afterbegin", all_countries);
+ 
+}

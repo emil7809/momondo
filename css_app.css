@@ -8,7 +8,7 @@
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: rgba(33, 3, 58, 1);
   overflow-x: hidden;
 }
@@ -163,9 +163,10 @@ h2 {
   top: 3.6rem;
   left: -200vw;
   width: 200vw;
-  height: 100vh;
+  height: 100%;
   z-index: 100;
   transition: 0.2s linear;
+  position: fixed;
 }
 
 #menu_container.active {
@@ -175,7 +176,7 @@ h2 {
 #menu_container #menu {
   /* width: 300px; */
   width: 97vw;
-  height: 100vh;
+  height: 100%;
   padding: 0.5rem;
   color: white;
   background: rgba(33, 3, 58, 1);
@@ -202,14 +203,18 @@ h2 {
   background: #e1d9e8;
   color: rgba(33, 3, 58, 1);
 }
+#menu_container #menu .menu_item:hover p {
+  color: rgba(33, 3, 58, 1);
+}
 
 .current_page {
   background: #e1d9e8 !important;
-  color: rgba(33, 3, 58, 1) !important;
+  color: rgba(33, 3, 58, 1) !important ;
 }
 
 .current_page p {
   font-weight: 700;
+  color: rgba(33, 3, 58, 1) !important ;
 }
 
 .current_page svg {
@@ -246,6 +251,13 @@ nav {
   width: 100%;
   height: 3.6rem;
   background: rgba(33, 3, 58, 1);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+
+main {
+  margin-top: 3.6rem;
 }
 
 nav #logo_container {
@@ -463,7 +475,7 @@ main#index #why_momondo svg {
   margin: 1rem 1rem 1rem 0;
 }
 
-/* main#index .card {
+main#index .card {
   margin-top: 3rem;
   border: 1px solid #572981;
   border-radius: 6px;
@@ -474,6 +486,8 @@ main#index .card img {
   width: 100%;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  /*  max-height: 350px; */
+  /*  object-fit: cover; */
 }
 main#index .card button {
   all: unset;
@@ -484,6 +498,7 @@ main#index .card button {
   width: 6rem;
   font-size: 0.9rem;
   font-weight: 700;
+  text-align: center;
 }
 
 main#index .card h4,
@@ -491,9 +506,23 @@ main#index .card p,
 main#index .card button {
   margin: 1rem;
   color: white !important;
-} */
+}
+
+main#index .card p {
+  font-size: 0.9rem;
+}
+
 main#index #inspiration {
   padding-top: 2.5rem;
+}
+main#index #inspiration .txt_and_button {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+main#index #inspiration .txt_and_button button {
+  height: 1rem;
 }
 main#index #inspiration h2 {
   padding-bottom: 0.2rem;
@@ -512,15 +541,22 @@ main#index #inspiration .flex > * {
 main#index #img_slide {
   display: grid;
   grid-auto-flow: column;
-  /*  overflow-x: hidden; */
-  /*   transform: translateX(-350px); */
+  gap: 1rem;
+  overflow-x: scroll;
+  padding-bottom: 1rem;
+}
+
+main#index #img_slide::-webkit-scrollbar {
+  background: rgba(153, 153, 153, 0);
+}
+
+main#index #img_slide::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 6px;
 }
 
 main#index #img_slide .img_slide_elm p {
   font-size: 0.8rem;
-}
-main#index #img_slide .img_slide_elm {
-  margin: 0 1rem;
 }
 
 main#index #img_slide .slide_img_sprite {
@@ -536,6 +572,66 @@ main#index #img_slide .slide_img_sprite.img_one {
 }
 main#index #img_slide .slide_img_sprite.img_two {
   background-image: url("https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2020/03/THEME_FLIGHT_GettyImages-909335900_1500px-1024x1024.jpg");
+}
+main#index #img_slide .slide_img_sprite.img_three {
+  background-image: url("https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2020/02/bhutan-temple-feature.jpg");
+}
+main#index #img_slide .slide_img_sprite.img_four {
+  background-image: url("https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2020/02/DEST_NORWAY_LOFOTEN_GettyImages-1050245738_Universal_Within-usage-period_37137-1024x1024.jpg");
+}
+.above_flight_to_shortcut_container {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.above_flight_to_shortcut_container h3 {
+  font-size: 1.2rem;
+  padding-bottom: 0.9rem;
+  color: white;
+}
+.above_flight_to_shortcut_container p {
+  font-size: 0.8rem;
+  color: #a79bb2;
+}
+main#index #trending_cities,
+main#index #trending_countries {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+main#index .flight_to_shortcut_container .flight_to_card {
+  background: white;
+  color: black;
+  display: flex;
+  align-items: flex-start;
+  /* margin: 1rem; */
+  border-radius: 4px;
+  height: 6rem;
+  box-shadow: 3px 4px 17px 0px rgba(0, 0, 0, 0.323);
+}
+
+main#index .flight_to_shortcut_container .flight_to_card h5 {
+  color: gray;
+  padding: 1rem;
+  padding: 0;
+  margin: 0.8rem 1rem 0 0.8rem;
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+main#index .flight_to_shortcut_container .flight_to_card p {
+  padding-top: 0;
+  margin: 0rem 0 0 0.8rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000000;
+}
+main#index .flight_to_shortcut_container .flight_to_card .left {
+  width: 12rem;
+}
+main#index .flight_to_shortcut_container .flight_to_card img {
+  width: 100%;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 div#flights-search {
@@ -1114,6 +1210,11 @@ footer .bot {
   }
 }
 @media screen and (min-width: 750px) {
+  .flex_grow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   nav #admin_dropdown {
     right: 6.5rem;
   }
@@ -1121,6 +1222,15 @@ footer .bot {
     text-align: left !important;
     padding-left: 0 !important;
     font-size: 1.8rem;
+  }
+  main#index #trending_cities,
+  main#index #trending_countries {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main#index #trending_cities .flight_to_card,
+  main#index #trending_countries .flight_to_card {
+    width: 100%;
   }
   .toggle_700 {
     display: block;
@@ -1234,6 +1344,15 @@ footer .bot {
     margin: 0;
   }
 
+  main#index #inspiration .txt_and_button {
+    grid-template-columns: 5fr 1fr;
+  }
+
+  main#index #img_slide .slide_img_sprite {
+    width: 100%;
+    height: 250px;
+  }
+
   #flight_form #from_to_container {
     padding-bottom: 0.3rem;
   }
@@ -1344,5 +1463,11 @@ footer .bot {
 
   main#flight_main div#flights-search > * {
     grid-column: 2;
+  }
+
+  main#index #trending_cities,
+  main#index #trending_countries {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
