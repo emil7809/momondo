@@ -416,13 +416,15 @@ main#page button {
 }
 main#index,
 main#stays,
-main#car {
+main#car,
+main#non_styles {
   padding: 0 3rem;
 }
 
 main#index h1,
 main#stays h1,
-main#car h1 {
+main#car h1,
+main#non_styles h1 {
   padding: 2rem 1rem;
 }
 
@@ -751,7 +753,8 @@ main#stays form {
 
 #flight_form button,
 main#stays form button,
-main#car form button {
+main#car form button,
+main#non_styles button {
   margin: 0 auto;
   margin-top: 1rem;
 }
@@ -1123,7 +1126,8 @@ main#admin #admin_bot .previous_searches_container .button_type_1 {
   width: 5rem;
 }
 main#stays h1,
-main#car h1 {
+main#car h1,
+main#non_styles h1 {
   font-size: 2rem;
 }
 main#stays form > * {
@@ -1223,6 +1227,13 @@ footer .bot .flex {
 
 footer .bot {
   padding-bottom: 4rem;
+}
+main#non_styles > * {
+  display: grid;
+  justify-content: center;
+}
+main#non_styles p {
+  text-align: center;
 }
 
 .flex {
@@ -1386,6 +1397,7 @@ footer .bot {
   main#index,
   main#stays,
   main#car,
+  main#non_styles,
   footer {
     display: grid;
     grid-template-columns: 1fr 800px 1fr;
@@ -1393,6 +1405,7 @@ footer .bot {
   main#index .center_container,
   main#stays .center_container,
   main#car .center_container,
+  main#non_styles .center_container,
   footer .center_container {
     grid-column: 2;
   }
