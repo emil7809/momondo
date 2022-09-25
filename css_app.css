@@ -414,16 +414,19 @@ main#page {
 main#page button {
   margin-top: 3rem;
 }
-main#index {
+main#index,
+main#stays {
   padding: 0 3rem;
 }
 
-main#index h1 {
+main#index h1,
+main#stays h1 {
   padding: 2rem 1rem;
 }
 
 main#index #from_to_container,
-main#index #time_container {
+main#index #time_container,
+main#stays form .input-caontainer_container {
   background-color: #0095cc;
 }
 
@@ -444,6 +447,7 @@ main#index #why_momondo {
   margin-top: 5rem;
 }
 main#index h2,
+main#stays h2,
 h4,
 p {
   color: white;
@@ -475,21 +479,22 @@ main#index #why_momondo svg {
   margin: 1rem 1rem 1rem 0;
 }
 
-main#index .card {
+.card {
   margin-top: 3rem;
   border: 1px solid #572981;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
 }
-main#index .card img {
+.card img {
   width: 100%;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  /*  max-height: 350px; */
-  /*  object-fit: cover; */
+  /* max-height: 350px; */
+  height: 400px;
+  object-fit: cover;
 }
-main#index .card button {
+.card button {
   all: unset;
   padding: 0.3rem 1rem;
   background: #6b15c1;
@@ -501,44 +506,44 @@ main#index .card button {
   text-align: center;
 }
 
-main#index .card h4,
-main#index .card p,
-main#index .card button {
+.card h4,
+.card p,
+.card button {
   margin: 1rem;
   color: white !important;
 }
 
-main#index .card p {
+.card p {
   font-size: 0.9rem;
 }
 
-main#index #inspiration {
+#inspiration {
   padding-top: 2.5rem;
 }
-main#index #inspiration .txt_and_button {
+#inspiration .txt_and_button {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
 }
 
-main#index #inspiration .txt_and_button button {
+#inspiration .txt_and_button button {
   height: 1rem;
 }
-main#index #inspiration h2 {
+#inspiration h2 {
   padding-bottom: 0.2rem;
 }
-main#index #inspiration p,
+#inspiration p,
 #img_slide b {
   font-size: 0.9rem;
   line-height: 1.5rem;
   color: white;
 }
 
-main#index #inspiration .flex > * {
+#inspiration .flex > * {
   margin: 0 1rem;
 }
 
-main#index #img_slide {
+#img_slide {
   display: grid;
   grid-auto-flow: column;
   gap: 1rem;
@@ -546,20 +551,20 @@ main#index #img_slide {
   padding-bottom: 1rem;
 }
 
-main#index #img_slide::-webkit-scrollbar {
+#img_slide::-webkit-scrollbar {
   background: rgba(153, 153, 153, 0);
 }
 
-main#index #img_slide::-webkit-scrollbar-thumb {
+#img_slide::-webkit-scrollbar-thumb {
   background: rgb(255, 255, 255);
   border-radius: 6px;
 }
 
-main#index #img_slide .img_slide_elm p {
+#img_slide .img_slide_elm p {
   font-size: 0.8rem;
 }
 
-main#index #img_slide .slide_img_sprite {
+#img_slide .slide_img_sprite {
   background-size: cover;
   height: 170px;
   width: 350px;
@@ -567,16 +572,16 @@ main#index #img_slide .slide_img_sprite {
   margin: 1rem 0 0.5rem 0;
 }
 
-main#index #img_slide .slide_img_sprite.img_one {
+#img_slide .slide_img_sprite.img_one {
   background-image: url("https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2020/03/MOMONDO_THEME_FLIGHT_AIRPORT_GettyImages-1033214038_1500x1500-1500x1312.jpg");
 }
-main#index #img_slide .slide_img_sprite.img_two {
+#img_slide .slide_img_sprite.img_two {
   background-image: url("https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2020/03/THEME_FLIGHT_GettyImages-909335900_1500px-1024x1024.jpg");
 }
-main#index #img_slide .slide_img_sprite.img_three {
+#img_slide .slide_img_sprite.img_three {
   background-image: url("https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2020/02/bhutan-temple-feature.jpg");
 }
-main#index #img_slide .slide_img_sprite.img_four {
+#img_slide .slide_img_sprite.img_four {
   background-image: url("https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2020/02/DEST_NORWAY_LOFOTEN_GettyImages-1050245738_Universal_Within-usage-period_37137-1024x1024.jpg");
 }
 .above_flight_to_shortcut_container,
@@ -585,24 +590,24 @@ main#index #img_slide .slide_img_sprite.img_four {
   margin: 3rem 0 2rem 0;
 }
 
-main#index .above_flight_to_shortcut_container h3,
-main#index .flight_deals_container h3 {
+.above_flight_to_shortcut_container h3,
+.flight_deals_container h3 {
   font-size: 1.2rem;
   padding-bottom: 0.9rem;
   color: white;
 }
 .above_flight_to_shortcut_container p,
-main#index .flight_deals_container p {
+.flight_deals_container p {
   font-size: 0.8rem;
   color: #a79bb2;
 }
-main#index #trending_cities,
-main#index #trending_countries {
+#trending_cities,
+#trending_countries {
   display: grid;
   gap: 1rem;
   margin-top: 1rem;
 }
-main#index .flight_to_shortcut_container .flight_to_card {
+.flight_to_shortcut_container .flight_to_card {
   background: white;
   color: black;
   display: flex;
@@ -613,7 +618,7 @@ main#index .flight_to_shortcut_container .flight_to_card {
   box-shadow: 3px 4px 17px 0px rgba(0, 0, 0, 0.323);
 }
 
-main#index .flight_to_shortcut_container .flight_to_card h5 {
+.flight_to_shortcut_container .flight_to_card h5 {
   color: gray;
   padding: 1rem;
   padding: 0;
@@ -621,46 +626,46 @@ main#index .flight_to_shortcut_container .flight_to_card h5 {
   font-size: 0.7rem;
   font-weight: 100;
 }
-main#index .flight_to_shortcut_container .flight_to_card p {
+.flight_to_shortcut_container .flight_to_card p {
   padding-top: 0;
   margin: 0rem 0 0 0.8rem;
   font-weight: 700;
   font-size: 1rem;
   color: #000000;
 }
-main#index .flight_to_shortcut_container .flight_to_card .left {
+.flight_to_shortcut_container .flight_to_card .left {
   width: 12rem;
 }
-main#index .flight_to_shortcut_container .flight_to_card img {
+.flight_to_shortcut_container .flight_to_card img {
   width: 100%;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
 
-main#index .flight_deals_container {
+.flight_deals_container {
   padding: 0 2rem;
 }
 
-main#index .flight_deals_container h3 {
+.flight_deals_container h3 {
   margin-top: 4rem;
 }
 
-/* main#index .flight_deals_container h3 div#flights-search {
+/*  .flight_deals_container h3 div#flights-search {
   background-color: #150127;
 } */
 
-main#index .flight_deals_container .p2 {
+.flight_deals_container .p2 {
   padding-top: 1rem;
   color: white;
   font-size: 0.9rem;
 }
-main#index .flight_deals_container .fligt_deals {
+.flight_deals_container .fligt_deals {
   text-align: start !important;
   color: white;
   display: grid;
   padding-top: 1rem;
 }
-main#index .flight_deals_container .fligt_deals a {
+.flight_deals_container .fligt_deals a {
   font-size: 0.8rem;
   font-weight: 700;
   padding: 1rem 0;
@@ -668,16 +673,16 @@ main#index .flight_deals_container .fligt_deals a {
   cursor: pointer;
 }
 
-main#index .flight_deals_container .fligt_deals.fat a {
+.flight_deals_container .fligt_deals.fat a {
   font-size: 0.9rem;
   display: flex;
   justify-content: space-between;
 }
-main#index .flight_deals_container .fligt_deals.fat a:hover {
+.flight_deals_container .fligt_deals.fat a:hover {
   text-decoration: none;
 }
 
-main#index .flight_deals_container .fligt_deals a:hover {
+.flight_deals_container .fligt_deals a:hover {
   text-decoration: underline;
 }
 
@@ -724,7 +729,8 @@ div#trip_details p {
   padding-bottom: 1rem;
 }
 
-#flight_form {
+#flight_form,
+main#stays form {
   display: grid;
   position: relative;
 }
@@ -740,7 +746,8 @@ div#trip_details p {
   z-index: 100;
 }
 
-#flight_form button {
+#flight_form button,
+main#stays form button {
   margin: 0 auto;
   margin-top: 1rem;
 }
@@ -1111,6 +1118,21 @@ main#admin #admin_bot .previous_searches_container .button_type_1 {
   color: #de1666 !important;
   width: 5rem;
 }
+main#stays h1 {
+  font-size: 2rem;
+}
+main#stays form > * {
+  padding: 0 0.5rem;
+}
+main#stays form > * > * > .input-caontainer {
+  margin: 0.5rem 0;
+  display: flex;
+}
+
+main#stays form input {
+  width: 100%;
+  min-width: 5rem;
+}
 
 footer {
   width: 100vw;
@@ -1268,24 +1290,32 @@ footer .bot {
     padding-left: 0 !important;
     font-size: 1.8rem;
   }
-  main#index #trending_cities,
-  main#index #trending_countries {
+  #trending_cities,
+  #trending_countries {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  main#index #trending_cities .flight_to_card,
-  main#index #trending_countries .flight_to_card {
+  #trending_cities .flight_to_card,
+  #trending_countries .flight_to_card {
     width: 100%;
   }
 
-  main#index .above_flight_to_shortcut_container h3,
-  main#index .flight_deals_container h3 {
+  .above_flight_to_shortcut_container h3,
+  .flight_deals_container h3 {
     font-size: 1.9rem;
   }
 
   .above_flight_to_shortcut_container p,
-  main#index .flight_deals_container p {
+  .flight_deals_container p {
     font-size: 1rem;
+  }
+
+  main#stays form .input-caontainer_container .flex_grow {
+    gap: 1rem;
+  }
+
+  .card img {
+    height: 300px;
   }
 
   .toggle_700 {
@@ -1342,11 +1372,13 @@ footer .bot {
 
 @media screen and (min-width: 900px) {
   main#index,
+  main#stays,
   footer {
     display: grid;
     grid-template-columns: 1fr 800px 1fr;
   }
   main#index .center_container,
+  main#stays .center_container,
   footer .center_container {
     grid-column: 2;
   }
@@ -1400,24 +1432,31 @@ footer .bot {
     margin: 0;
   }
 
-  main#index #inspiration .txt_and_button {
+  #inspiration .txt_and_button {
     grid-template-columns: 5fr 1fr;
   }
 
-  main#index #img_slide .slide_img_sprite {
+  #img_slide .slide_img_sprite {
     width: 100%;
     height: 250px;
   }
-  main#index .flight_deals_container {
+  .flight_deals_container {
     padding: 0;
   }
-  main#index .flight_deals_container .fligt_deals {
+  .flight_deals_container .fligt_deals {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0 1rem;
   }
 
-  main#index .flight_deals_container .fligt_deals.fat {
+  .flight_deals_container .fligt_deals.fat {
     grid-template-columns: 1fr 1fr;
+    gap: 0 1rem;
+  }
+
+  main#stays form,
+  .input-caontainer_container {
+    display: flex;
+    align-items: center;
     gap: 0 1rem;
   }
 
@@ -1438,7 +1477,8 @@ footer .bot {
     border-top-right-radius: 6px;
   }
 
-  #flight_form button {
+  #flight_form button,
+  main#stays form button {
     margin-left: 0.5rem;
     margin-top: 0;
   }
@@ -1520,6 +1560,7 @@ footer .bot {
 
 @media screen and (min-width: 1300px) {
   main#index,
+  main#stays,
   footer {
     grid-template-columns: 1fr 1200px 1fr;
   }
@@ -1533,8 +1574,8 @@ footer .bot {
     grid-column: 2;
   }
 
-  main#index #trending_cities,
-  main#index #trending_countries {
+  #trending_cities,
+  #trending_countries {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }

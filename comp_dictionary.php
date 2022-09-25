@@ -96,5 +96,8 @@ $dictionary = [
     'en_rejserestriktioner' => 'Rejserestriktioner English',
     'dk_rejserestriktioner' => 'Rejserestriktioner Dansk',
 
+    'en_staysh1' => 'Book a stay with free cancellation - search now.',
+    'dk_staysh1' => 'Book en overnatning med gratis afbestilling – søg nu.',
+
 
 ];
