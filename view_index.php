@@ -171,6 +171,33 @@ require_once __DIR__ . '/comp_header.php'; ?>
         <a>Bucharest</a>
       </div>
       <h3>How to find cheap flight deals with momondo</h3>
+      <div class="fligt_deals fat">
+        <a>How does momondo find such cheap airfare?
+          <svg style="width:1rem;fill:white;margin-left:6px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <path d="M100 135a4.99 4.99 0 0 1-3.363-1.3l-55-50a5 5 0 1 1 6.727-7.399L100 123.243L151.637 76.3a5 5 0 1 1 6.726 7.399l-55 50A4.986 4.986 0 0 1 100 135z">
+            </path>
+          </svg>
+        </a>
+
+        <a>How do I find the best price on plane tickets?
+          <svg style="width:1rem;fill:white;margin-left:6px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <path d="M100 135a4.99 4.99 0 0 1-3.363-1.3l-55-50a5 5 0 1 1 6.727-7.399L100 123.243L151.637 76.3a5 5 0 1 1 6.726 7.399l-55 50A4.986 4.986 0 0 1 100 135z">
+            </path>
+          </svg>
+        </a>
+        <a>How can Mix & Match save me money?
+          <svg style="width:1rem;fill:white;margin-left:6px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <path d="M100 135a4.99 4.99 0 0 1-3.363-1.3l-55-50a5 5 0 1 1 6.727-7.399L100 123.243L151.637 76.3a5 5 0 1 1 6.726 7.399l-55 50A4.986 4.986 0 0 1 100 135z">
+            </path>
+          </svg>
+        </a>
+        <a>How do I make sure I don’t miss a flight deal?
+          <svg style="width:1rem;fill:white;margin-left:6px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <path d="M100 135a4.99 4.99 0 0 1-3.363-1.3l-55-50a5 5 0 1 1 6.727-7.399L100 123.243L151.637 76.3a5 5 0 1 1 6.726 7.399l-55 50A4.986 4.986 0 0 1 100 135z">
+            </path>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 
