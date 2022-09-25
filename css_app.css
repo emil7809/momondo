@@ -579,17 +579,20 @@ main#index #img_slide .slide_img_sprite.img_three {
 main#index #img_slide .slide_img_sprite.img_four {
   background-image: url("https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2020/02/DEST_NORWAY_LOFOTEN_GettyImages-1050245738_Universal_Within-usage-period_37137-1024x1024.jpg");
 }
-.above_flight_to_shortcut_container {
+.above_flight_to_shortcut_container,
+.flight_deals_container {
   text-align: center;
   margin: 3rem 0 2rem 0;
 }
 
-.above_flight_to_shortcut_container h3 {
+main#index .above_flight_to_shortcut_container h3,
+main#index .flight_deals_container h3 {
   font-size: 1.2rem;
   padding-bottom: 0.9rem;
   color: white;
 }
-.above_flight_to_shortcut_container p {
+.above_flight_to_shortcut_container p,
+main#index .flight_deals_container p {
   font-size: 0.8rem;
   color: #a79bb2;
 }
@@ -634,9 +637,51 @@ main#index .flight_to_shortcut_container .flight_to_card img {
   border-bottom-left-radius: 3px;
 }
 
-div#flights-search {
-  background-color: #150127;
+main#index .flight_deals_container {
+  padding: 0 2rem;
 }
+
+main#index .flight_deals_container h3 {
+  margin-top: 4rem;
+}
+
+/* main#index .flight_deals_container h3 div#flights-search {
+  background-color: #150127;
+} */
+
+main#index .flight_deals_container .p2 {
+  padding-top: 1rem;
+  color: white;
+  font-size: 0.9rem;
+}
+main#index .flight_deals_container .fligt_deals {
+  text-align: start !important;
+  color: white;
+  display: grid;
+  padding-top: 1rem;
+}
+main#index .flight_deals_container .fligt_deals a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  border-bottom: 1px #0095cc solid;
+  cursor: pointer;
+}
+
+main#index .flight_deals_container .fligt_deals.fat a {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+main#index .flight_deals_container .fligt_deals.fat a:hover {
+  text-decoration: none;
+}
+
+main#index .flight_deals_container .fligt_deals a:hover {
+  text-decoration: underline;
+}
+
+/*INDEX END*/
 main#flight_main div#flights-search {
   padding: 2rem 3rem;
 }
@@ -1232,6 +1277,17 @@ footer .bot {
   main#index #trending_countries .flight_to_card {
     width: 100%;
   }
+
+  main#index .above_flight_to_shortcut_container h3,
+  main#index .flight_deals_container h3 {
+    font-size: 1.9rem;
+  }
+
+  .above_flight_to_shortcut_container p,
+  main#index .flight_deals_container p {
+    font-size: 1rem;
+  }
+
   .toggle_700 {
     display: block;
   }
@@ -1351,6 +1407,18 @@ footer .bot {
   main#index #img_slide .slide_img_sprite {
     width: 100%;
     height: 250px;
+  }
+  main#index .flight_deals_container {
+    padding: 0;
+  }
+  main#index .flight_deals_container .fligt_deals {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 1rem;
+  }
+
+  main#index .flight_deals_container .fligt_deals.fat {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1rem;
   }
 
   #flight_form #from_to_container {

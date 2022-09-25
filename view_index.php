@@ -146,6 +146,34 @@ require_once __DIR__ . '/comp_header.php'; ?>
     </div>
   </div>
 
+  <div class="center_container">
+    <div class="flight_deals_container">
+      <h3>Flight deals by destination</h3>
+      <p>Find and compare cheap flights</p>
+      <p class="p2">We search and compare billions of real-time prices on plane tickets so you can easily find
+        the
+        cheapest, quickest, and best flight deals for you.</p>
+      <div class="fligt_deals">
+        <a>London</a>
+        <a>Istanbul</a>
+        <a>Dubai</a>
+        <a>Bangkok</a>
+        <a>New York</a>
+        <a>Lisbon</a>
+        <a>Islamabad</a>
+        <a>Barcelona</a>
+        <a>Manchester</a>
+        <a>Copenhagen</a>
+        <a>Paris</a>
+        <a>Rome</a>
+        <a>New Delhi</a>
+        <a>Manila</a>
+        <a>Bucharest</a>
+      </div>
+      <h3>How to find cheap flight deals with momondo</h3>
+    </div>
+  </div>
+
 </main>
 
 
