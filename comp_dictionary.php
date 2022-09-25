@@ -99,5 +99,8 @@ $dictionary = [
     'en_staysh1' => 'Book a stay with free cancellation - search now.',
     'dk_staysh1' => 'Book en overnatning med gratis afbestilling – søg nu.',
 
+    'en_carh1' => 'Hire a car with free cancellation - search now.',
+    'dk_carh1' => 'Find og sammenlign de bedste tilbud på udlejningsbiler',
+
 
 ];
