@@ -94,15 +94,15 @@
             <div class="input-caontainer2">
                 <input name="new_password" type="password" placeholder="Password" oninput="validateNewPassword()" onblur="clean_New_Password_input()">
             </div>
-            <!--  <div class="repeat_password_error flex" style="display: none">
+            <div class="repeat_password_error flex" style="display: none">
                 <?= $_error_x ?>
                 <p class="error_style">
                     Your password must match
                 </p>
             </div>
             <div class="input-caontainer2">
-                <input name="repeat_password" type="password" placeholder="Repeat password">
-            </div> -->
+                <input name="repeat_password" type="password" placeholder="Repeat password" oninput="validateMatchPassword()" onblur="clean_Match_Password_input()" data-validate="match" data-match-name="new_password">
+            </div>
             <button class="button_type_1 sign_up_button">Sign up</button>
         </form>
 

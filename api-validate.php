@@ -8,5 +8,6 @@ if ($_POST['new_user_email']  == $existing_email) {
     _respond('This email allready exists', 400);
     exit();
 }
+echo json_encode($_POST['user_name']);
 
-_respond('You did it');
+/* _respond('You did it'); */

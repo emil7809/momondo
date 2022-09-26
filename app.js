@@ -355,6 +355,35 @@ async function validateNewPassword() {
 
 }
 
+
+
+function clean_Match_Password_input() {
+  document.querySelector(".repeat_password_error").style.display = "none";
+  document.querySelector("[name='repeat_password']").classList.remove("validate_error")
+  document.querySelector("[name='repeat_password']").classList.remove("validate_green")
+}
+
+function validateMatchPassword() {  
+  const form =  document.querySelector("[name='repeat_password']")
+  document.querySelectorAll("[data-validate]",form).forEach(function(element) {
+    element.classList.remove("validate_error")
+    document.querySelector(".repeat_password_error").style.display = "none";
+  })
+  document.querySelectorAll("[data-validate]",form).forEach( function(element){
+    switch(element.getAttribute("data-validate")){
+      case "match":
+        if( element.value != document.querySelector(`[name='${element.getAttribute("data-match-name")}']`, form).value ){
+          element.classList.add("validate_error")
+          document.querySelector(".repeat_password_error").style.display = "flex";
+        }
+        break;
+    }
+  })
+  if( ! document.querySelector(".validate_error", form) ){return }
+  document.querySelector(".validate_error", form).focus()
+  document.querySelector("[name='repeat_password']").classList.add("validate_green")
+}
+
 async function validateSignup() {
   const form = document.querySelector("#signup_form");
   const conn = await fetch("api-validate.php", {
@@ -366,45 +395,46 @@ async function validateSignup() {
       checkEmail()
       validateNewEmail()
       validateNewPassword()
+      validateMatchPassword()
       return;
   }
 
-  const data = await conn.json(); // Convert text to JSON
+  const user_name = await conn.json(); // Convert text to JSON
   // Success
   console.log("Success");
   closeSignup()
   Swal.fire({
       icon: "success",
-      title: "Welcome " + data.user_name + "!",
+      title: "Welcome " + user_name + "!",
       html: "You account has been created!",
       confirmButtonText: "Sign in",
   }).then(() => {
       toggle_module()
   });
-
-
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 async function delete_flight() {
-   
     const frm = event.target.form
     const conn = await fetch('api-delete-flight.php', {
       method: "POST",
       body: new FormData(frm)
     })
-    const data = await conn.json()
     if (!conn.ok) {
-      // Sweet alert: ups... fligth not found
-      console.log(data)
       return
     }
     // Success
-    console.log(data)
-    // console.log(e.path[1].children[0].value)
-    frm.remove()
+    Swal.fire(
+      '🗑️',
+      'Flight Deleted',
+      'success'
+    )
+    frm.remove();
+   
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 get_trending_cities()
 

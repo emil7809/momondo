@@ -128,7 +128,8 @@ input {
 
 .new_email_error,
 .email_in_use_error,
-.new_password_error {
+.new_password_error,
+.repeat_password_error {
   padding-top: 1rem;
 }
 

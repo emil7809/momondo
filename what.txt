@@ -1,21 +1,7 @@
-
-HELP
-
-help Nice to have 
-
-how do I make shure the user styas on the page when they switch laungadge or logged on??
-comp_dictionary.php line 3. what is happening here?
-user test validation 
-
-
-
-
-
-
 Nice to have
 
-signup  - Confirm password
-        - translate to danish
+signup  - Confirm password //////////meh///////////////
+       
 
 
 flight  - makae the chosen flight apear in input
@@ -23,15 +9,10 @@ flight  - makae the chosen flight apear in input
 
 admin   - make prettiere image upload module
         - make drop down display none on blur
-        - sweet alert, shure you want to delete?
-
-flight  - connect to new database, add search 
 
 all     - translate
 
 header  - make mobile buttons work
         - translate to danish
-
-signup  - remove 400 eroor from console?
 
 menu    - side menu push page when oppened
