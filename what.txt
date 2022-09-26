@@ -9,9 +9,7 @@ user test validation
 
 
 
-//TODO
 
-trips   - add content and add button on no_styled pages
 
 
 Nice to have

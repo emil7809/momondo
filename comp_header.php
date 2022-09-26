@@ -234,10 +234,10 @@ try {
 
           <?php
           if ($language == 'en') {
-            echo '<a id="dansk" href="/?language=dk" class="orange-hover toggle_700">Dansk</a>';
+            echo '<a id="dansk" href="../?language=dk" class="orange-hover toggle_700">Dansk</a>';
           }
           if ($language == 'dk') {
-            echo '<a id="dansk" href="/?language=en" class="orange-hover toggle_700">English</a>';
+            echo '<a id="dansk" href="../?language=en" class="orange-hover toggle_700">English</a>';
           }
 
           ?>
