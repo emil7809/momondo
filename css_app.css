@@ -1236,6 +1236,7 @@ footer {
   padding: 3.5rem 2rem;
   margin-top: 5rem;
   color: white;
+  position: relative;
 }
 
 footer h4 {
@@ -1511,7 +1512,7 @@ main#non_styles p {
   main#trips #trip_container #trip_buttons {
     display: flex;
     position: sticky;
-    top: 3.6rem;
+    top: 3.5rem;
     background-color: #21033a;
     gap: 2rem;
     padding: 1rem 0;
@@ -1703,7 +1704,7 @@ main#non_styles p {
     height: 10rem;
   }
 
-  main#trips #trips_hero {
+  main#trips #trips_hero #trips_hero_inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -1758,6 +1759,15 @@ main#non_styles p {
   main#trips,
   footer {
     grid-template-columns: 1fr 1200px 1fr;
+  }
+
+  main#trips #trips_hero {
+    display: grid;
+    grid-template-columns: 1fr 1300px 1fr;
+  }
+
+  main#trips #trips_hero #trips_hero_inner {
+    grid-column: 2;
   }
 
   main#flight_main div#flights-search {
