@@ -1,5 +1,6 @@
 <?php
 $_title = 'Car';
+$_current_page = 'car';
 require_once __DIR__ . '/comp_header.php';
 ?>
 

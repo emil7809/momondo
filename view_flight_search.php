@@ -1,4 +1,5 @@
 <?php $_title = 'Flight Search';
+$_current_page = 'flight_search';
 require_once __DIR__ . '/comp_header.php'; ?>
 
 <main id="flight_main">

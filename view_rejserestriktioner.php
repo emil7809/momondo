@@ -1,5 +1,6 @@
 <?php
 $_title = 'Rejserestriktioner';
+$_current_page = 'rejserestriktioner';
 require_once __DIR__ . '/comp_header.php';
 ?>
 

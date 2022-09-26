@@ -1,4 +1,5 @@
 <?php $_title = 'Momondo';
+$_current_page = '';
 
 require_once __DIR__ . '/comp_header.php'; ?>
 

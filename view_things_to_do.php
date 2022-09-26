@@ -1,5 +1,6 @@
 <?php
 $_title = 'Things to do';
+$_current_page = 'things_to_do';
 require_once __DIR__ . '/comp_header.php';
 ?>
 

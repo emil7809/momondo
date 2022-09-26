@@ -1,5 +1,6 @@
 <?php
 $_title = 'Stays';
+$_current_page = 'stays';
 require_once __DIR__ . '/comp_header.php';
 //$_title = $dictionary[$language . '_overnatninger']; 
 ?>
