@@ -43,6 +43,22 @@ function _validate_password()
     return $_POST['new_password'];
 }
 
+function _validate_user_password()
+{
+    $error_message = 'user_password min ' . PASSWORD_MIN_LEN . ' max ' . PASSWORD_MAX_LEN . ' characters';
+    if (!isset($_POST['user_password'])) {
+        _respond($error_message, 400);
+    }
+    $_POST['user_password'] = trim($_POST['user_password']);
+    if (strlen($_POST['user_password']) < PASSWORD_MIN_LEN) {
+        _respond($error_message, 400);
+    }
+    if (strlen($_POST['user_password']) > PASSWORD_MAX_LEN) {
+        _respond($error_message, 400);
+    }
+    return $_POST['user_password'];
+}
+
 
 
 function _validate_email()

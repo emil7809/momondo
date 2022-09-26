@@ -417,6 +417,7 @@ main#page button {
 main#index,
 main#stays,
 main#car,
+main#trips,
 main#non_styles {
   padding: 0 3rem;
 }
@@ -453,6 +454,7 @@ main#index #why_momondo {
 main#index h2,
 main#stays h2,
 main#car h2,
+main#trips h2,
 h4,
 p {
   color: white;
@@ -1144,6 +1146,13 @@ main#car form input {
   min-width: 5rem;
 }
 
+main#trips #trips_hero {
+  background-color: #2d0a3b;
+}
+main#trips #trips_hero h1 {
+  text-align: start;
+}
+
 footer {
   width: 100vw;
   background: rgba(19, 0, 38, 1);
@@ -1398,6 +1407,7 @@ main#non_styles p {
   main#stays,
   main#car,
   main#non_styles,
+  main#trips,
   footer {
     display: grid;
     grid-template-columns: 1fr 800px 1fr;
@@ -1406,6 +1416,7 @@ main#non_styles p {
   main#stays .center_container,
   main#car .center_container,
   main#non_styles .center_container,
+  main#trips .center_container,
   footer .center_container {
     grid-column: 2;
   }
@@ -1596,6 +1607,7 @@ main#non_styles p {
   main#index,
   main#stays,
   main#car,
+  main#trips,
   footer {
     grid-template-columns: 1fr 1200px 1fr;
   }

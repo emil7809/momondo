@@ -1,23 +1,17 @@
 
 HELP
-signup  - remove 400 eroor from console? is backend confirmed?
 
 help Nice to have 
 
-how do I make shure the user styas on the page when they switch laungadge?
+how do I make shure the user styas on the page when they switch laungadge or logged on??
 comp_dictionary.php line 3. what is happening here?
 user test validation 
 
 
 
 //TODO
-signup  - remove 400 eroor from console? is backend confirmed?  
-        - better backend validation 
 
-
-5 pages - add content
-
-
+trips   - add content and add button on no_styled pages
 
 
 Nice to have
@@ -25,13 +19,9 @@ Nice to have
 signup  - Confirm password
         - translate to danish
 
-header  - make mobile buttons work
-        - translate to danish
 
 flight  - makae the chosen flight apear in input
-        
 
-menu    - side menu push page when oppened
 
 admin   - make prettiere image upload module
         - make drop down display none on blur
@@ -40,3 +30,10 @@ admin   - make prettiere image upload module
 flight  - connect to new database, add search 
 
 all     - translate
+
+header  - make mobile buttons work
+        - translate to danish
+
+signup  - remove 400 eroor from console?
+
+menu    - side menu push page when oppened

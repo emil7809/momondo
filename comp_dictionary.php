@@ -102,5 +102,8 @@ $dictionary = [
     'en_carh1' => 'Hire a car with free cancellation - search now.',
     'dk_carh1' => 'Find og sammenlign de bedste tilbud på udlejningsbiler',
 
+    'en_tripsh1' => 'An easier way to manage your trips',
+    'dk_tripsh1' => 'En nemmere måde at holde styr på dine rejser på'
+
 
 ];

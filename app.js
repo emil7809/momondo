@@ -260,6 +260,133 @@ async function validateSingin() {
   window.location.replace("bridge_signin.php");
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+function clean_name_input() {
+  document.querySelector(".name_error").style.display = "none";
+  document.querySelector("[name='user_name']").classList.remove("validate_error")
+  document.querySelector("[name='user_name']").classList.remove("validate_green")
+}
+
+function clean_New_Email_input() {
+  document.querySelector(".new_email_error").style.display = "none";
+  document.querySelector(".email_in_use_error").style.display = "none";
+  document.querySelector("[name='new_user_email']").classList.remove("validate_error")
+  document.querySelector("[name='new_user_email']").classList.remove("validate_green")
+
+}
+
+function clean_New_Password_input() {
+  document.querySelector(".new_password_error").style.display = "none";
+  document.querySelector("[name='new_password']").classList.remove("validate_error")
+  document.querySelector("[name='new_password']").classList.remove("validate_green")
+
+}
+
+async function validateName() {
+  const frm = document.querySelector("#signup_form");
+  const conn = await fetch("api-validate-name.php", {
+      method: "POST",
+      body: new FormData(frm),
+  });
+  if (!conn.ok) {
+      document.querySelector(".name_error").style.display = "flex";
+      document.querySelector("[name='user_name']").classList.add("validate_error")
+      document.querySelector("[name='user_name']").classList.remove("validate_green")
+      return;
+  }
+  document.querySelector(".name_error").style.display = "none";
+  document.querySelector("[name='user_name']").classList.remove("validate_error")
+  document.querySelector("[name='user_name']").classList.add("validate_green")
+
+}
+async function checkEmail() {
+  const frm = document.querySelector("#signup_form");
+  const conn = await fetch("api-check-email.php", {
+      method: "POST",
+      body: new FormData(frm),
+  });
+  if (!conn.ok) {
+      console.log("ooops")
+      document.querySelector(".email_in_use_error").style.display = "flex";
+      document.querySelector("[name='new_user_email']").classList.remove("validate_green")
+      document.querySelector("[name='new_user_email']").classList.add("validate_error")
+      return;
+  }
+  document.querySelector(".email_in_use_error").style.display = "none";
+  document.querySelector("[name='new_user_email']").classList.remove("validate_error")
+  document.querySelector("[name='new_user_email']").classList.remove("validate_green")
+
+}
+
+async function validateNewEmail() {
+  const frm = document.querySelector("#signup_form");
+  const conn = await fetch("api-validate-new_email.php", {
+      method: "POST",
+      body: new FormData(frm),
+  });
+  if (!conn.ok) {
+      document.querySelector(".new_email_error").style.display = "flex";
+      document.querySelector("[name='new_user_email']").classList.add("validate_error")
+      document.querySelector("[name='new_user_email']").classList.remove("validate_green")
+      return;
+  }
+  document.querySelector(".new_email_error").style.display = "none";
+  /*  document.querySelector("[name='new_user_email']").classList.remove("validate_error") */
+  document.querySelector("[name='new_user_email']").classList.add("validate_green")
+
+}
+
+async function validateNewPassword() {
+  const frm = document.querySelector("#signup_form");
+  const conn = await fetch("api-validate-new-password.php", {
+      method: "POST",
+      body: new FormData(frm),
+  });
+  if (!conn.ok) {
+      document.querySelector(".new_password_error").style.display = "flex";
+      document.querySelector("[name='new_password']").classList.add("validate_error")
+      document.querySelector("[name='new_password']").classList.remove("validate_green")
+      return;
+  }
+  document.querySelector(".new_password_error").style.display = "none";
+  document.querySelector("[name='new_password']").classList.remove("validate_error")
+  document.querySelector("[name='new_password']").classList.add("validate_green")
+
+}
+
+async function validateSignup() {
+  const form = document.querySelector("#signup_form");
+  const conn = await fetch("api-validate.php", {
+      method: "POST",
+      body: new FormData(form),
+  });
+  if (!conn.ok) {
+      validateName()
+      checkEmail()
+      validateNewEmail()
+      validateNewPassword()
+      return;
+  }
+
+  const data = await conn.json(); // Convert text to JSON
+  // Success
+  console.log("Success");
+  closeSignup()
+  Swal.fire({
+      icon: "success",
+      title: "Welcome " + data.user_name + "!",
+      html: "You account has been created!",
+      confirmButtonText: "Sign in",
+  }).then(() => {
+      toggle_module()
+  });
+
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
 async function delete_flight() {
    
     const frm = event.target.form
