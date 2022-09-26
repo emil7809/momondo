@@ -84,7 +84,8 @@ input {
   border: none !important;
 }
 
-.button_type_1:hover {
+.button_type_1:hover,
+.button_type_4:hover {
   filter: brightness(90%);
 }
 
@@ -417,7 +418,6 @@ main#page button {
 main#index,
 main#stays,
 main#car,
-main#trips,
 main#non_styles {
   padding: 0 3rem;
 }
@@ -1147,10 +1147,87 @@ main#car form input {
 }
 
 main#trips #trips_hero {
+  padding: 0 2rem;
   background-color: #2d0a3b;
 }
 main#trips #trips_hero h1 {
   text-align: start;
+}
+
+main#trips #trips_hero p {
+  font-size: 0.8rem;
+  line-height: 20px;
+  font-family: CeraPro-Bold, sans-serif;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+
+main#trips #trips_hero button {
+  height: 1.9rem;
+}
+main#trips #trips_hero .flex {
+  gap: 1rem;
+}
+
+main#trips #trips_hero svg {
+  margin: 2rem 0;
+}
+
+main#trips #trip_container {
+  padding: 2rem;
+}
+main#trips #trip_container #trip_buttons {
+  display: none;
+}
+
+main#trips #trip_container p {
+  padding: 1rem 0;
+  font-size: 0.9em;
+}
+main#trips #trip_container h3 {
+  padding: 1rem 0;
+  font-size: 1em;
+  color: white;
+}
+
+main#trips #trip_container a {
+  color: white;
+  font-size: 0.9rem;
+  color: #0095cc;
+}
+
+main#trips #trip_container a:hover {
+  color: #3daad2;
+}
+
+main#trips #trip_container .img_container {
+  background-color: #ebe0ea;
+  padding: 2rem 5rem 0 5rem;
+  border-radius: 8px;
+  margin: 2rem 0 5rem 0;
+}
+
+main#trips #trip_container .img_container svg {
+  margin-bottom: -0.3rem;
+}
+
+main#trips #trips_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+main#trips #trips_footer p {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+main#trips #trips_footer button {
+  width: 10rem;
+  margin: 1rem auto;
+  font-size: 0.8rem;
+  height: 1.5rem;
 }
 
 footer {
@@ -1289,6 +1366,50 @@ main#non_styles p {
   align-self: center;
 }
 @media screen and (min-width: 600px) {
+  main#trips #trips_hero {
+    display: grid;
+  }
+  main#trips #trips_hero h1 {
+    font-size: 2.3rem;
+  }
+  main#trips #trips_hero p {
+    font-size: 1.1rem;
+    line-height: 24px;
+  }
+  main#trips #trips_hero button {
+    width: 12rem;
+  }
+  main#trips #trips_hero svg {
+    max-height: 400px;
+    margin: 2rem auto;
+  }
+
+  main#trips #trip_container #trips_top,
+  main#trips #trip_container #trips_mid,
+  main#trips #trip_container #trips_bot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 3rem 0;
+    align-items: center;
+  }
+
+  main#trips #trip_container #trips_mid .img_container {
+    grid-column: 1;
+  }
+  main#trips #trip_container #trips_mid div:first-child {
+    grid-column: 2;
+    grid-row-end: 1;
+  }
+
+  main#trips #trip_container .img_container {
+    padding: 2rem 3rem 0 3rem;
+    margin: 2rem 0;
+  }
+
+  main#trips #trips_footer p {
+    font-size: 1.5rem;
+  }
   .the_big_black.show {
     display: grid !important;
   }
@@ -1387,6 +1508,27 @@ main#non_styles p {
     gap: 2rem;
   }
 
+  main#trips #trip_container #trip_buttons {
+    display: flex;
+    position: sticky;
+    top: 3.6rem;
+    background-color: #21033a;
+    gap: 2rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  main#trips #trip_container #trip_buttons button:first-child {
+    background-color: #dad2e0;
+    color: #150127 !important;
+  }
+
+  main#trips #trip_container #trip_buttons button {
+    width: 10rem;
+    color: white !important;
+    background: #220340;
+  }
+
   footer .top {
     max-width: 600px;
   }
@@ -1407,7 +1549,7 @@ main#non_styles p {
   main#stays,
   main#car,
   main#non_styles,
-  main#trips,
+  main#trips #trip_container,
   footer {
     display: grid;
     grid-template-columns: 1fr 800px 1fr;
@@ -1561,6 +1703,12 @@ main#non_styles p {
     height: 10rem;
   }
 
+  main#trips #trips_hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
   footer #top_mid_container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -1620,7 +1768,13 @@ main#non_styles p {
   main#flight_main div#flights-search > * {
     grid-column: 2;
   }
-
+  main#trips #trip_container #trip_buttons {
+    flex-direction: column;
+    margin-left: -12rem;
+    width: 10rem;
+    position: fixed;
+    margin-top: 27rem;
+  }
   #trending_cities,
   #trending_countries {
     display: grid;
