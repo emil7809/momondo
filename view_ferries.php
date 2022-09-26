@@ -16,6 +16,7 @@ require_once __DIR__ . '/comp_header.php';
         <a href=<?= 'stays/?language=' . $language ?>><button class="button_type_1"><?= $dictionary[$language . '_overnatninger'] ?></button></a>
         <a href=<?= 'car/?language=' . $language ?>><button class="button_type_1"><?= $dictionary[$language . '_bil'] ?></button></a>
         <a href=<?= 'admin/?language=' . $language ?>><button class="button_type_1">Admin</button></a>
+        <a href=<?= 'trips/?language=' . $language ?>><button class="button_type_1">Trips</button></a>
 
 
     </div>
