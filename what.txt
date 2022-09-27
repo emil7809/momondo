@@ -6,6 +6,7 @@ signup  - Confirm password //////////meh///////////////
 
 flight  - makae the chosen flight apear in input
 
+console - Fjern errors
 
 admin   - make prettiere image upload module
         - make drop down display none on blur

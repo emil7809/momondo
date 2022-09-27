@@ -24,6 +24,8 @@ function toggle_module() {
   }
 }
 
+
+
 function toggle_admin_module() {
   const modulee = document.querySelector(".the_other_big_black");
  
@@ -118,14 +120,14 @@ async function get_cities_from() {
                     <img src="#img#"> 
                     <div>
                       <div class="flex"> 
-                        <p>#name#</p>
+                        <p class="city_name" >#name#</p>
                         <p>#country#</p>
                         <p>#initial#</p>
                       </div>
                       <p>#airport#</p>
                     </div>
                    
-                      <input type="checkbox">
+                      <input type="checkbox" value="#nameValue#" onclick="selectCity()">
                     
                   </div>`;
 
@@ -135,6 +137,7 @@ async function get_cities_from() {
     let copy_div_city = div_city;
     copy_div_city = copy_div_city.replace("#img#", city.cityImage);
     copy_div_city = copy_div_city.replace("#name#", cityName);
+    copy_div_city = copy_div_city.replace("#nameValue#", cityName);
     copy_div_city = copy_div_city.replace("#country#", city.cityCountry);
     copy_div_city = copy_div_city.replace("#initial#", city.cityInitial);
     copy_div_city = copy_div_city.replace("#airport#", city.cityAirport);
@@ -158,7 +161,7 @@ async function get_cities_to() {
                     <img src="#img#">
                     <div>
                       <div class="flex"> 
-                        <p>#name#</p>
+                        <p class="city_name">#name#</p>
                         <p>#country#</p>
                         <p>#initial#</p>
                       </div>
@@ -183,6 +186,20 @@ async function get_cities_to() {
   document
     .querySelector("#to-results")
     .insertAdjacentHTML("afterbegin", all_cities);
+}
+
+function selectCity() {
+  let array = []
+  let checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+  for (var i = 0; i < checkboxes.length; i++) {
+    array.push(checkboxes[i].value) 
+  }
+  document.querySelector("#from-input").value = array;
+  document.querySelector("#from-input").value.innerText
+  console.log()
+  
+  /* forEach((element) => element.classList.add("input_value")) */
+ 
 }
 
 // ##############################

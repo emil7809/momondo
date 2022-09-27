@@ -1792,3 +1792,8 @@ main#non_styles p {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.input_value {
+  color: red;
+  border: 1px red solid;
+}
