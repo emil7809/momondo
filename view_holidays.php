@@ -10,7 +10,7 @@ require_once __DIR__ . '/comp_header.php';
     </div>
     <div class="center_container">
         <img src="img/404.jpg" alt="cute cat meme">
-        <h1>Sorry this page was not styled</h1>
+        <h2><?= $dictionary[$language . '_non_styled_h2'] ?></h2>
         <p>But the following have been</p>
 
         <a href=<?= '/?language=' . $language ?>><button class="button_type_1">Home</button></a>

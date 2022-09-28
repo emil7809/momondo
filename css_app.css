@@ -433,7 +433,8 @@ main#non_styles {
 main#index h1,
 main#stays h1,
 main#car h1,
-main#non_styles h1 {
+main#non_styles h1,
+main#non_styles h2 {
   padding: 2rem 1rem;
 }
 
@@ -1139,6 +1140,12 @@ main#stays h1,
 main#car h1,
 main#non_styles h1 {
   font-size: 2rem;
+}
+
+main#non_styles h2 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
 }
 main#stays form > * {
   padding: 0 0.5rem;

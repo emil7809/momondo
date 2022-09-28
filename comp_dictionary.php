@@ -103,7 +103,10 @@ $dictionary = [
     'dk_carh1' => 'Find og sammenlign de bedste tilbud på udlejningsbiler',
 
     'en_tripsh1' => 'An easier way to manage your trips',
-    'dk_tripsh1' => 'En nemmere måde at holde styr på dine rejser på'
+    'dk_tripsh1' => 'En nemmere måde at holde styr på dine rejser på',
+
+    'en_non_styled_h2' => 'Sorry this page was not styled',
+    'dk_non_styled_h2' => 'Beklager denne sider er ikke stylet'
 
 
 ];
