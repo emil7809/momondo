@@ -188,8 +188,6 @@ try {
 
         <a href=<?= 'trips/?language=' . $language ?> class="orange-hover">Trips</a>
 
-
-
         <div class="toggle_700_flex" id="login-button">
 
           <?php
@@ -206,6 +204,8 @@ try {
             <p onclick="toggle_dropdown()" class="login-letteres" href="/bridge_signout.php">' . $_SESSION['user_name'] . '</p>';
           }
           ?>
+
+
 
         </div>
 

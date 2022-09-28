@@ -81,9 +81,7 @@ function show_from_results() {
   });
 }
 
-function hide_from_results() {
-  document.querySelector("#from-results").style.display = "none";
-}
+
 
 //////////////////////////////////////////////////////////////////
 
@@ -97,14 +95,12 @@ function show_to_results() {
   }
 
   document.addEventListener("click", function (event) {
-    if (event.target.closest("#from-results")) return;
-    document.querySelector("#from-results").style.display = "none";
+    if (event.target.closest("#to-results")) return;
+    document.querySelector("#to-results").style.display = "none";
   });
 }
 
-function hide_to_results() {
-  document.querySelector("#to-results").style.display = "none";
-}
+
 
 ///////////////////////////////////////////////////////////////////
 
@@ -114,26 +110,26 @@ async function get_cities_from() {
  /*  const conn = await fetch("api-get-cities-from.php"); */
  const conn = await fetch("api-get-cities-from.php");
   const data = await conn.json();
-  console.log(data)
+ /*  console.log(data) */
   let all_cities = "";
   const div_city = `<div class="city-contaier">
                     <img src="#img#"> 
                     <div>
                       <div class="flex"> 
-                        <p class="city_name" >#name#</p>
+                        <p>#name#</p>
                         <p>#country#</p>
                         <p>#initial#</p>
                       </div>
                       <p>#airport#</p>
                     </div>
                    
-                      <input type="checkbox" value="#nameValue#" onclick="selectCity()">
+                      <input class="from_input_box" type="checkbox" value="#nameValue#" onclick="selectCity()">
                     
                   </div>`;
 
   data.forEach(city => {
     let cityName = city.cityName;
-    console.log(cityName);
+   /*  console.log(cityName); */
     let copy_div_city = div_city;
     copy_div_city = copy_div_city.replace("#img#", city.cityImage);
     copy_div_city = copy_div_city.replace("#name#", cityName);
@@ -161,20 +157,21 @@ async function get_cities_to() {
                     <img src="#img#">
                     <div>
                       <div class="flex"> 
-                        <p class="city_name">#name#</p>
+                        <p>#name#</p>
                         <p>#country#</p>
                         <p>#initial#</p>
                       </div>
                       <p>#airport#</p>
                     </div>
-                    <input type="checkbox">
+                    <input class="to_input_box" type="checkbox" value="#nameValue#" onclick="selectCityTo()">
                   </div>`;
 
   for (let x = 0; x < data.length; x++) {
     let city = data[x];
-    console.log(city.cityName);
+   /*  console.log(city.cityName); */
     let div_city_clone = div_city;
     div_city_clone = div_city_clone.replace("#img#", city.cityImage);
+    div_city_clone = div_city_clone.replace("#nameValue#", city.cityName);
     div_city_clone = div_city_clone.replace("#name#", city.cityName);
     div_city_clone = div_city_clone.replace("#country#", city.cityCountry);
     div_city_clone = div_city_clone.replace("#initial#", city.cityInitial);
@@ -190,16 +187,33 @@ async function get_cities_to() {
 
 function selectCity() {
   let array = []
-  let checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+  let checkboxes = document.querySelectorAll('.from_input_box:checked')
   for (var i = 0; i < checkboxes.length; i++) {
     array.push(checkboxes[i].value) 
   }
   document.querySelector("#from-input").value = array;
   document.querySelector("#from-input").value.innerText
-  console.log()
+  document.querySelector("#from-input").classList.add("input_array")
+  if ( document.querySelector("#from-input").value === "") {
+    document.querySelector("#from-input").classList.remove("input_array")
+  }
   
   /* forEach((element) => element.classList.add("input_value")) */
  
+}
+
+function selectCityTo() {
+  let array = []
+  let checkboxes = document.querySelectorAll('.to_input_box:checked')
+  for (var i = 0; i < checkboxes.length; i++) {
+    array.push(checkboxes[i].value) 
+  }
+  document.querySelector("#to-input").value = array;
+  document.querySelector("#to-input").value.innerText
+  document.querySelector("#to-input").classList.add("input_array")
+  if ( document.querySelector("#to-input").value === "") {
+    document.querySelector("#to-input").classList.remove("input_array")
+  }
 }
 
 // ##############################

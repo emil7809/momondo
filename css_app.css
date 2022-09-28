@@ -40,6 +40,13 @@ input {
   padding-left: 0.8rem;
 }
 
+.input_array {
+  background: white;
+  border: 1px pink solid;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+}
+
 .input-caontainer2 input {
   height: 3rem;
   width: 100%;

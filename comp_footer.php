@@ -71,6 +71,8 @@
         </div>
         <img id="footer_img" style="display: none;" src="img/footer.webp" alt="footer img">
     </div>
+    <div id="trending_countries" style="display:none"></div>
+    <div id="trending_cities" style="display:none"></div>
 </footer>
 
 <script src="app.js"></script>
